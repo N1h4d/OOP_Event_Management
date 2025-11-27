@@ -1,0 +1,53 @@
+2025-11-27 16:50:26,875 [INFO] __main__ - Starting Event Management System...
+2025-11-27 16:50:26,876 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-27 16:50:48,300 [INFO] __main__ - Application stopped.
+2025-11-27 16:51:07,055 [INFO] __main__ - Starting Event Management System...
+2025-11-27 16:51:07,055 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-27 16:51:23,813 [INFO] __main__ - Application stopped.
+2025-11-27 16:54:34,726 [INFO] __main__ - Starting Event Management System...
+2025-11-27 16:54:34,727 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-27 16:54:49,090 [INFO] __main__ - Application stopped.
+2025-11-27 16:55:24,593 [INFO] __main__ - Starting Event Management System...
+2025-11-27 16:55:24,594 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-27 16:56:36,343 [INFO] src.repositories.venue_repository - Venue created: [Venue]
+  ID         : b0fb5528-a63e-43e0-9f90-192767dbeb0b
+  Name       : jw marriot hotel
+  Address    : neftciler prospekti / baku
+  Capacity   : 2000
+  Manager    : emil mammadhuseynov
+  Phone      : +9946667778
+  Status     : Open
+2025-11-27 16:58:05,252 [INFO] src.repositories.event_repository - Event created: [Event]
+  ID          : fa343723-06c9-46ed-b708-d587fe2189bf
+  Name        : assip hackaton
+  Category    : hackaton
+  Date & Time : 2025-12-08 11:00
+  Duration    : 10000 min
+  Venue ID    : b0fb5528-a63e-43e0-9f90-192767dbeb0b
+  Status      : Active
+2025-11-27 16:59:14,714 [INFO] src.repositories.participant_repository - Participant created: [Participant]
+  ID          : e9bcb8aa-8a99-4cf3-b154-4623b2db1c29
+  Name        : Emil askerov
+  Email       : emila@gmail.com
+  Phone       : +9947778899
+  Age         : 19
+  Gender      : M
+  Reg. Date   : 2025-12-05
+  Type        : Standard
+2025-11-27 17:00:05,052 [INFO] src.repositories.ticket_repository - Ticket created: [Ticket]
+  ID           : 5eb2e957-a7f7-4bd3-ba6e-267f6d9747f9
+  Event ID     : fa343723-06c9-46ed-b708-d587fe2189bf
+  Participant  : e9bcb8aa-8a99-4cf3-b154-4623b2db1c29
+  Seat         : bh13
+  Type         : Regular
+  Price        : 0.0
+  Purchase     : 2025-12-06
+  Status       : Valid
+2025-11-27 17:00:15,768 [INFO] __main__ - Application stopped.
+2025-11-27 17:04:35,056 [INFO] __main__ - Starting Event Management System...
+2025-11-27 17:04:35,057 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-27 17:04:38,739 [INFO] src.repositories.venue_repository - Fetched 3 venues from database.
+2025-11-27 17:04:43,135 [INFO] src.repositories.event_repository - Fetched 3 events from database.
+2025-11-27 17:04:44,324 [INFO] src.repositories.participant_repository - Fetched 4 participants from database.
+2025-11-27 17:04:46,824 [INFO] src.repositories.ticket_repository - Fetched 4 tickets from database.
+2025-11-27 17:04:47,921 [INFO] __main__ - Application stopped.
