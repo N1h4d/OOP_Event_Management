@@ -1,154 +1,95 @@
-# Event Management System – Python OOP Project
+# 🎫 Event Management System (OOP + SQLite)
 
-This project is a **console-based Event Management System** developed in Python.
-It is designed to demonstrate strong **Object-Oriented Programming (OOP)** concepts,
-a clean **layered architecture**, and the practical implementation of
-**SOLID, GRASP, and CUPID** design principles.
+This is a **console-based Event Management System** developed in Python using
+**Object-Oriented Programming (OOP)**, **SOLID, GRASP, CUPID principles**, and
+**SQLite** as a database.
 
-All project data is stored using **SQLite**, and the system includes
-**centralized logging** and **unit testing**.
-
----
-
-## 1. Key Features
-
-- ✅ Create, list, and manage venues
-- ✅ Create, list, and manage events
-- ✅ Register participants
-- ✅ Sell and list tickets
-- ✅ Persistent data storage using SQLite
-- ✅ Centralized logging system (console + optional file logging)
-- ✅ Unit testing with `unittest`
-- ✅ Clean layered architecture
-- ✅ Full application of OOP principles
-- ✅ SOLID, GRASP, and CUPID design principles implemented
-- ✅ CLI-based interactive user interface
+The project was developed for **Seminar 1 and Seminar 2** at university and
+demonstrates clean architecture, layered design, design patterns, and testing.
 
 ---
 
-## 2. Technologies Used
+## 🚀 Features
 
-- **Python 3**
-- **SQLite** (`sqlite3` module)
-- **Python logging module**
-- **unittest** for testing
-- **UUID** for unique entity identification
+### ✅ Features
+
+- Object-Oriented Design (OOP)
+- SQLite Database Integration
+- CRUD Operations:
+  - Venue
+  - Event
+  - Participant
+  - Ticket
+- Logging system
+- CLI-based UI
+- Repo + Service + Controller Layer Architecture
+- UUID-based IDs
+- Encapsulation & Abstraction with BaseModel
+
+### ✅ Extended Features
+
+- ✅ Service Layer (Business Logic)
+- ✅ Update & Delete Operations
+- ✅ Strategy Pattern (Ticket Pricing)
+- ✅ Unit Testing with `unittest`
+- ✅ Layered Architecture (Controller → Service → Repository → DB)
+- ✅ Error Handling & Logging at all layers
 
 ---
 
-## 3. Project Structure
+## 🛠 Technologies Used
 
-```text
+- Python 3
+- SQLite
+- Logging
+- unittest (Testing)
+- OOP & Design Patterns
+
+---
+
+## 📂 Project Structure
+
 OOP_Event_Management/
+│
 ├── src/
-│   ├── main.py
-│   ├── logging_config.py
-│   ├── database/
-│   │   ├── connection.py
-│   │   └── schema.py
-│   ├── models/
-│   │   ├── base_model.py
-│   │   ├── venue.py
-│   │   ├── event.py
-│   │   ├── participant.py
-│   │   └── ticket.py
-│   ├── repositories/
-│   │   ├── base_repository.py
-│   │   ├── venue_repository.py
-│   │   ├── event_repository.py
-│   │   ├── participant_repository.py
-│   │   └── ticket_repository.py
-│   └── controllers/
-│       └── cli_controller.py
+│ ├── controllers/
+│ ├── services/
+│ │ ├── pricing/ ← Strategy Pattern
+│ ├── repositories/
+│ ├── models/
+│ ├── database/
+│ ├── logging_config.py
+│ └── main.py
+│
 ├── tests/
-│   ├── test_models.py
-│   └── test_repositories.py
-└── docs/
-    ├── README.md
-    ├── architecture.md
-    ├── user_guide.md
+│ ├── test_ticket_service.py
+│ ├── test_repositories.py
+| ├── test_models.py
+│
+├── docs/
+│ ├── design_principles.md
+│ ├── architecture.md
+│ ├── seminar2_features.md
+│
+└── README.md
+
+## ▶️ How to Run
+
+```bash
+python3 -m src.main
 
 
-Object-Oriented Programming Implementation
+🧪 How to Run Tests
+python3 -m unittest discover
 
-This project fully demonstrates:
+'''
 
-Abstraction
-Implemented via the abstract BaseModel class.
-
-Encapsulation
-All attributes are protected (_name, _date, etc.) and accessible only via properties.
-
-Inheritance
-All domain models (Event, Venue, Participant, Ticket) inherit from BaseModel.
-
-Polymorphism
-Each model overrides the display_info() method differently.
-
-Design Principles Applied
-
-✅ SOLID
-Single Responsibility Principle (SRP)
-Open/Closed Principle (OCP)
-Liskov Substitution Principle (LSP)
-Interface Segregation Principle (ISP)
-Dependency Inversion Principle (DIP)
-
-✅ GRASP
-Controller (CLIController)
-Creator (Controller creates model objects)
-High Cohesion
-Low Coupling
-
-✅ CUPID
-Composable
-Understandable
-Predictable
-Idiomatic
-Domain-based
+🧠 Design Patterns Used
+ - Strategy Pattern (Ticket Pricing)
+ - Singleton (Database Connection)
+ - Repository Pattern
+ - Service Layer Pattern
 
 
-Design Patterns Used
-Singleton Pattern
-Used in DatabaseConnection to ensure a single SQLite connection.
-
-Repository Pattern
-Used to separate data access logic from the business logic.
-
-Controller Pattern (GRASP)
-Used to manage all user interactions through CLIController.
-
-
-
-Logging System
-The application uses a centralized logging system:
-Logs application start and stop
-Logs all CREATE operations
-Logs all READ (list) operations
-Logs database initialization
-Can optionally log into a file (logs/app.log)
-This makes the system fully traceable and debuggable.
-
-
-
-Unit tests are implemented using Python's built-in unittest framework:
-✅ Model tests (test_models.py)
-✅ Repository tests with in-memory SQLite (test_repositories.py)
-
-Run all tests using:
-python3 -m unittest
-
-
-
-CLI Menu Overview
-1. Create Venue
-2. List Venues
-3. Create Event
-4. List Events
-5. Create Participant
-6. List Participants
-7. Sell Ticket
-8. List Tickets
-0. Exit
 
 ```

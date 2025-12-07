@@ -51,3 +51,434 @@
 2025-11-27 17:04:44,324 [INFO] src.repositories.participant_repository - Fetched 4 participants from database.
 2025-11-27 17:04:46,824 [INFO] src.repositories.ticket_repository - Fetched 4 tickets from database.
 2025-11-27 17:04:47,921 [INFO] __main__ - Application stopped.
+2025-11-28 12:03:31,620 [INFO] __main__ - Starting Event Management System...
+2025-11-28 12:03:31,621 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-28 12:03:34,234 [INFO] __main__ - Application stopped.
+2025-11-28 12:27:02,138 [INFO] __main__ - Starting Event Management System...
+2025-11-28 12:27:02,141 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-28 12:27:24,830 [INFO] __main__ - Starting Event Management System...
+2025-11-28 12:27:24,831 [INFO] src.database.schema - Database schema initialized successfully.
+2025-11-28 12:27:56,378 [INFO] src.repositories.venue_repository - Venue created: [Venue]
+  ID         : 72c8ed83-b7fe-4cd9-a4cf-874c14ce9ab0
+  Name       : nermin
+  Address    : ev
+  Capacity   : 5
+  Manager    : mermin
+  Phone      : rewst4eky5edyk5
+  Status     : Open
+2025-11-28 12:28:09,295 [INFO] src.repositories.venue_repository - Fetched 4 venues from database.
+2025-11-28 12:29:04,280 [INFO] src.repositories.venue_repository - Fetched 4 venues from database.
+2025-11-28 12:29:22,616 [INFO] src.repositories.event_repository - Event created: [Event]
+  ID          : 776db28d-5912-42c9-bf47-61b1767ce3f1
+  Name        : nermin
+  Category    : conf
+  Date & Time : 2025-12-34 23:00
+  Duration    : 1312 min
+  Venue ID    : 17625cb3-234b-4648-9881-933ddb126cfc
+  Status      : Active
+2025-11-28 12:29:42,565 [INFO] src.repositories.participant_repository - Fetched 4 participants from database.
+2025-11-28 12:29:49,229 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-11-28 12:30:01,594 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-11-28 12:30:05,480 [INFO] src.repositories.participant_repository - Fetched 4 participants from database.
+2025-12-07 21:17:40,757 [INFO] __main__ - Starting Event Management System...
+2025-12-07 21:17:40,760 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 21:17:40,760 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 21:18:32,618 [INFO] src.repositories.venue_repository - Venue created: [Venue]
+  ID         : 0e84cb5e-7c06-4b0d-bc6a-36ce0f941904
+  Name       : BEU Conference Hall
+  Address    : Baku, Khirdalan
+  Capacity   : 200
+  Manager    : Ali
+  Phone      : 0501234567
+  Status     : Open
+2025-12-07 21:18:32,618 [INFO] src.services.venue_service - Venue created via VenueService: [Venue]
+  ID         : 0e84cb5e-7c06-4b0d-bc6a-36ce0f941904
+  Name       : BEU Conference Hall
+  Address    : Baku, Khirdalan
+  Capacity   : 200
+  Manager    : Ali
+  Phone      : 0501234567
+  Status     : Open
+2025-12-07 21:24:56,136 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-07 21:24:56,138 [INFO] __main__ - Application stopped.
+2025-12-07 21:28:33,680 [INFO] __main__ - Starting Event Management System...
+2025-12-07 21:28:33,682 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 21:28:33,682 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 21:29:14,118 [INFO] src.repositories.venue_repository - Fetched 5 venues from database.
+2025-12-07 21:29:14,118 [INFO] src.services.venue_service - Retrieved 5 venues via VenueService.
+2025-12-07 21:30:05,724 [INFO] src.repositories.venue_repository - Venue created: [Venue]
+  ID         : 58ca99db-9383-4be8-bdcc-a4f20d268083
+  Name       : Main Hall
+  Address    : Baku Center
+  Capacity   : 300
+  Manager    : Nihad
+  Phone      : 0507654321
+  Status     : Open
+2025-12-07 21:30:05,725 [INFO] src.services.venue_service - Venue created via VenueService: [Venue]
+  ID         : 58ca99db-9383-4be8-bdcc-a4f20d268083
+  Name       : Main Hall
+  Address    : Baku Center
+  Capacity   : 300
+  Manager    : Nihad
+  Phone      : 0507654321
+  Status     : Open
+2025-12-07 21:31:05,912 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-07 21:31:05,912 [INFO] __main__ - Application stopped.
+2025-12-07 21:31:34,496 [INFO] __main__ - Starting Event Management System...
+2025-12-07 21:31:34,498 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 21:31:34,498 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 21:33:26,414 [INFO] __main__ - Starting Event Management System...
+2025-12-07 21:33:26,416 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 21:33:26,416 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 21:33:59,524 [INFO] src.services.venue_service - Venue created via VenueService: [Venue]
+  ID         : 4e77df47-83fc-44a7-b3ef-22dbad294b0f
+  Name       : BMU Conference Hall
+  Address    : Baki, Xirdalan
+  Capacity   : 259
+  Manager    : Elxan
+  Phone      : 0514562233
+  Status     : Open
+2025-12-07 21:59:30,808 [INFO] __main__ - Starting Event Management System...
+2025-12-07 21:59:30,809 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 21:59:30,809 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 21:59:33,622 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 21:59:33,623 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:00:28,161 [INFO] src.services.venue_service - Venue created via VenueService: [Venue]
+  ID         : 2866a4bb-ac42-42ce-89dc-e5a6b5b1e7ef
+  Name       : Main Hall 2
+  Address    : Baku Center 2
+  Capacity   : 275
+  Manager    : Elvin
+  Phone      : 0556431240
+  Status     : Open
+2025-12-07 22:00:50,478 [INFO] src.repositories.venue_repository - Fetched 8 venues from database.
+2025-12-07 22:00:50,478 [INFO] src.services.venue_service - Retrieved 8 venues via VenueService.
+2025-12-07 22:01:38,917 [INFO] src.repositories.venue_repository - Fetched 8 venues from database.
+2025-12-07 22:01:38,917 [INFO] src.services.venue_service - Retrieved 8 venues via VenueService.
+2025-12-07 22:02:36,947 [INFO] src.repositories.venue_repository - Venue updated: [Venue]
+  ID         : 72c8ed83-b7fe-4cd9-a4cf-874c14ce9ab0
+  Name       : SPARTAK
+  Address    : evv
+  Capacity   : 7
+  Manager    : Narmin
+  Phone      : 0518509022
+  Status     : Open
+2025-12-07 22:02:40,929 [INFO] src.repositories.venue_repository - Fetched 8 venues from database.
+2025-12-07 22:02:40,929 [INFO] src.services.venue_service - Retrieved 8 venues via VenueService.
+2025-12-07 22:03:00,039 [INFO] src.repositories.venue_repository - Fetched 8 venues from database.
+2025-12-07 22:03:00,040 [INFO] src.services.venue_service - Retrieved 8 venues via VenueService.
+2025-12-07 22:03:06,797 [INFO] src.repositories.venue_repository - Venue deleted: id=72c8ed83-b7fe-4cd9-a4cf-874c14ce9ab0
+2025-12-07 22:03:10,515 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:03:10,515 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:04:12,800 [INFO] src.repositories.participant_repository - Participant created: [Participant]
+  ID          : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Name        : John Smith
+  Email       : john@example.com
+  Phone       : 0500000000
+  Age         : 25
+  Gender      : M
+  Reg. Date   : 2025-01-01
+  Type        : VIP
+2025-12-07 22:04:12,800 [INFO] src.services.participant_service - Participant created via ParticipantService: [Participant]
+  ID          : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Name        : John Smith
+  Email       : john@example.com
+  Phone       : 0500000000
+  Age         : 25
+  Gender      : M
+  Reg. Date   : 2025-01-01
+  Type        : VIP
+2025-12-07 22:05:05,155 [INFO] src.repositories.participant_repository - Participant created: [Participant]
+  ID          : 7d6548fb-6b8a-45bd-a4d8-9508f84e37b4
+  Name        : Sara Doe
+  Email       : sara@example.com
+  Phone       : 0511111111
+  Age         : 20
+  Gender      : f
+  Reg. Date   : 2025-01-02
+  Type        : Standard
+2025-12-07 22:05:05,155 [INFO] src.services.participant_service - Participant created via ParticipantService: [Participant]
+  ID          : 7d6548fb-6b8a-45bd-a4d8-9508f84e37b4
+  Name        : Sara Doe
+  Email       : sara@example.com
+  Phone       : 0511111111
+  Age         : 20
+  Gender      : f
+  Reg. Date   : 2025-01-02
+  Type        : Standard
+2025-12-07 22:05:12,600 [INFO] src.repositories.participant_repository - Fetched 6 participants from database.
+2025-12-07 22:05:12,600 [INFO] src.services.participant_service - Retrieved 6 participants via ParticipantService.
+2025-12-07 22:05:36,167 [INFO] src.repositories.participant_repository - Fetched 6 participants from database.
+2025-12-07 22:05:36,167 [INFO] src.services.participant_service - Retrieved 6 participants via ParticipantService.
+2025-12-07 22:06:24,773 [INFO] src.repositories.participant_repository - Participant updated: [Participant]
+  ID          : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Name        : John Smith Jr
+  Email       : john@example.com
+  Phone       : 0502228811
+  Age         : 26
+  Gender      : M
+  Reg. Date   : 2025-01-01
+  Type        : Standard
+2025-12-07 22:06:50,959 [INFO] src.repositories.participant_repository - Fetched 6 participants from database.
+2025-12-07 22:06:50,960 [INFO] src.services.participant_service - Retrieved 6 participants via ParticipantService.
+2025-12-07 22:07:18,127 [INFO] src.repositories.participant_repository - Fetched 6 participants from database.
+2025-12-07 22:07:18,128 [INFO] src.services.participant_service - Retrieved 6 participants via ParticipantService.
+2025-12-07 22:07:27,420 [INFO] src.repositories.participant_repository - Participant deleted: id=7d6548fb-6b8a-45bd-a4d8-9508f84e37b4
+2025-12-07 22:07:33,042 [INFO] src.repositories.participant_repository - Fetched 5 participants from database.
+2025-12-07 22:07:33,042 [INFO] src.services.participant_service - Retrieved 5 participants via ParticipantService.
+2025-12-07 22:07:46,670 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:07:46,670 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:08:39,255 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:08:39,256 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:08:44,517 [INFO] src.repositories.event_repository - Event created: [Event]
+  ID          : 2e58cdb5-9cdb-470e-8671-67532cd5d855
+  Name        : W-Python Workshop
+  Category    : Workshop
+  Date & Time : 2025-02-01 14:00
+  Duration    : 90 min
+  Venue ID    : 17625cb3-234b-4648-9881-933ddb126cfc
+  Status      : Active
+2025-12-07 22:08:44,518 [INFO] src.services.event_service - Event created via EventService: [Event]
+  ID          : 2e58cdb5-9cdb-470e-8671-67532cd5d855
+  Name        : W-Python Workshop
+  Category    : Workshop
+  Date & Time : 2025-02-01 14:00
+  Duration    : 90 min
+  Venue ID    : 17625cb3-234b-4648-9881-933ddb126cfc
+  Status      : Active
+2025-12-07 22:09:42,999 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:09:42,999 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:09:50,501 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:09:50,501 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:10:20,541 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:10:20,541 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:10:49,196 [INFO] src.repositories.event_repository - Event updated: [Event]
+  ID          : 2e58cdb5-9cdb-470e-8671-67532cd5d855
+  Name        : Advanced Python Workshop
+  Category    : Workshop
+  Date & Time : 2025-02-01 15:00
+  Duration    : 120 min
+  Venue ID    : 17625cb3-234b-4648-9881-933ddb126cfc
+  Status      : Active
+2025-12-07 22:10:50,226 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:10:50,226 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:10:59,237 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:10:59,237 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:11:47,726 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:11:47,728 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:11:55,010 [INFO] src.repositories.event_repository - Event deleted: id=776db28d-5912-42c9-bf47-61b1767ce3f1
+2025-12-07 22:12:09,259 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:09,259 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:21,956 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:21,957 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:27,250 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:27,250 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:29,718 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:29,718 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:30,294 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:30,294 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:30,597 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:30,598 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:30,774 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:30,774 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:30,969 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:30,969 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:31,164 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:31,164 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:31,991 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:31,991 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:12:34,486 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:12:34,486 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:12:35,939 [INFO] src.repositories.event_repository - Fetched 4 events from database.
+2025-12-07 22:12:35,939 [INFO] src.services.event_service - Retrieved 4 events via EventService.
+2025-12-07 22:13:21,830 [INFO] src.repositories.venue_repository - Fetched 7 venues from database.
+2025-12-07 22:13:21,831 [INFO] src.services.venue_service - Retrieved 7 venues via VenueService.
+2025-12-07 22:13:25,976 [INFO] src.repositories.event_repository - Event created: [Event]
+  ID          : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Name        : Conference Day
+  Category    : Conference
+  Date & Time : 2025-03-01 10:00
+  Duration    : 180 min
+  Venue ID    : 2866a4bb-ac42-42ce-89dc-e5a6b5b1e7ef
+  Status      : Active
+2025-12-07 22:13:25,976 [INFO] src.services.event_service - Event created via EventService: [Event]
+  ID          : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Name        : Conference Day
+  Category    : Conference
+  Date & Time : 2025-03-01 10:00
+  Duration    : 180 min
+  Venue ID    : 2866a4bb-ac42-42ce-89dc-e5a6b5b1e7ef
+  Status      : Active
+2025-12-07 22:13:44,290 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:13:44,290 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:14:14,475 [INFO] src.repositories.participant_repository - Fetched 5 participants from database.
+2025-12-07 22:14:14,475 [INFO] src.services.participant_service - Retrieved 5 participants via ParticipantService.
+2025-12-07 22:14:42,461 [INFO] src.repositories.ticket_repository - Ticket created: [Ticket]
+  ID           : 92297099-36fd-46c5-98c0-c7a53d58f76d
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A1
+  Type         : Standart
+  Price        : 100.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:14:42,462 [INFO] src.services.ticket_service - Ticket sold via TicketService. Base price=100.00, final price=100.00, type=Standart, info=[Ticket]
+  ID           : 92297099-36fd-46c5-98c0-c7a53d58f76d
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A1
+  Type         : Standart
+  Price        : 100.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:14:59,822 [INFO] src.repositories.ticket_repository - Fetched 5 tickets from database.
+2025-12-07 22:14:59,822 [INFO] src.services.ticket_service - Retrieved 5 tickets via TicketService.
+2025-12-07 22:15:27,166 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:15:27,166 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:15:43,195 [INFO] src.repositories.participant_repository - Fetched 5 participants from database.
+2025-12-07 22:15:43,195 [INFO] src.services.participant_service - Retrieved 5 participants via ParticipantService.
+2025-12-07 22:16:26,621 [INFO] src.repositories.ticket_repository - Ticket created: [Ticket]
+  ID           : 9a295d6a-1866-4813-b3bd-f561e7afdadf
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A2
+  Type         : VIP
+  Price        : 150.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:16:26,621 [INFO] src.services.ticket_service - Ticket sold via TicketService. Base price=100.00, final price=150.00, type=VIP, info=[Ticket]
+  ID           : 9a295d6a-1866-4813-b3bd-f561e7afdadf
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A2
+  Type         : VIP
+  Price        : 150.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:16:31,367 [INFO] src.repositories.ticket_repository - Fetched 6 tickets from database.
+2025-12-07 22:16:31,368 [INFO] src.services.ticket_service - Retrieved 6 tickets via TicketService.
+2025-12-07 22:17:00,006 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:17:00,006 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:17:07,845 [INFO] src.repositories.participant_repository - Fetched 5 participants from database.
+2025-12-07 22:17:07,845 [INFO] src.services.participant_service - Retrieved 5 participants via ParticipantService.
+2025-12-07 22:17:46,208 [INFO] src.repositories.ticket_repository - Ticket created: [Ticket]
+  ID           : e14bd74f-3e98-43d9-928d-6b8dfaec5b29
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A3
+  Type         : Student
+  Price        : 70.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:17:46,208 [INFO] src.services.ticket_service - Ticket sold via TicketService. Base price=100.00, final price=70.00, type=Student, info=[Ticket]
+  ID           : e14bd74f-3e98-43d9-928d-6b8dfaec5b29
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : A3
+  Type         : Student
+  Price        : 70.0
+  Purchase     : 2025-03-01
+  Status       : Valid
+2025-12-07 22:17:59,043 [INFO] src.repositories.ticket_repository - Fetched 7 tickets from database.
+2025-12-07 22:17:59,043 [INFO] src.services.ticket_service - Retrieved 7 tickets via TicketService.
+2025-12-07 22:18:09,826 [INFO] src.repositories.ticket_repository - Fetched 7 tickets from database.
+2025-12-07 22:18:09,826 [INFO] src.services.ticket_service - Retrieved 7 tickets via TicketService.
+2025-12-07 22:19:00,332 [INFO] src.repositories.ticket_repository - Ticket updated: [Ticket]
+  ID           : 92297099-36fd-46c5-98c0-c7a53d58f76d
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : B1
+  Type         : VIP
+  Price        : 120.0
+  Purchase     : 2025-03-01
+  Status       : Used
+2025-12-07 22:19:00,332 [INFO] src.services.ticket_service - Ticket updated via TicketService: [Ticket]
+  ID           : 92297099-36fd-46c5-98c0-c7a53d58f76d
+  Event ID     : b212af21-f236-48d0-a12f-ce14b9aa5e6a
+  Participant  : d7844bd4-2b11-440e-9591-1669e482ba0b
+  Seat         : B1
+  Type         : VIP
+  Price        : 120.0
+  Purchase     : 2025-03-01
+  Status       : Used
+2025-12-07 22:19:06,192 [INFO] src.repositories.ticket_repository - Fetched 7 tickets from database.
+2025-12-07 22:19:06,192 [INFO] src.services.ticket_service - Retrieved 7 tickets via TicketService.
+2025-12-07 22:19:21,899 [INFO] src.repositories.ticket_repository - Fetched 7 tickets from database.
+2025-12-07 22:19:21,900 [INFO] src.services.ticket_service - Retrieved 7 tickets via TicketService.
+2025-12-07 22:19:30,774 [INFO] src.repositories.ticket_repository - Ticket deleted: id=e14bd74f-3e98-43d9-928d-6b8dfaec5b29
+2025-12-07 22:19:30,774 [INFO] src.services.ticket_service - Ticket deleted via TicketService: id=e14bd74f-3e98-43d9-928d-6b8dfaec5b29
+2025-12-07 22:19:33,614 [INFO] src.repositories.ticket_repository - Fetched 6 tickets from database.
+2025-12-07 22:19:33,614 [INFO] src.services.ticket_service - Retrieved 6 tickets via TicketService.
+2025-12-07 22:20:15,080 [ERROR] src.controllers.cli_controller - Error while creating participant: Age must be a positive integer.
+2025-12-07 22:20:24,400 [INFO] src.repositories.event_repository - Fetched 5 events from database.
+2025-12-07 22:20:24,401 [INFO] src.services.event_service - Retrieved 5 events via EventService.
+2025-12-07 22:20:26,833 [INFO] src.repositories.participant_repository - Fetched 5 participants from database.
+2025-12-07 22:20:26,834 [INFO] src.services.participant_service - Retrieved 5 participants via ParticipantService.
+2025-12-07 22:20:31,478 [ERROR] src.controllers.cli_controller - Error while selling ticket: Price must be a non-negative number.
+2025-12-07 22:21:04,739 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-07 22:21:04,740 [INFO] __main__ - Application stopped.
+2025-12-07 22:41:09,602 [INFO] __main__ - Starting Event Management System...
+2025-12-07 22:41:09,604 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-07 22:41:09,604 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-07 22:43:57,476 [INFO] src.services.venue_service - Venue created: id=257a8387-730c-47dd-846f-13a545816e15, name=Orion Hall
+2025-12-07 22:46:11,080 [INFO] src.services.venue_service - Venue created: id=21fab5d9-db94-4149-9a97-fa43945208e8, name=Zenith Center
+2025-12-07 22:46:19,620 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-07 22:46:58,396 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-07 22:47:31,095 [INFO] src.services.venue_service - Venue updated: id=257a8387-730c-47dd-846f-13a545816e15, name=Orion Hall Pro
+2025-12-07 22:47:43,574 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-07 22:48:20,285 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-07 22:48:29,171 [INFO] src.repositories.venue_repository - Venue deleted: id=21fab5d9-db94-4149-9a97-fa43945208e8
+2025-12-07 22:48:29,171 [INFO] src.services.venue_service - Venue deleted: id=21fab5d9-db94-4149-9a97-fa43945208e8
+2025-12-07 22:48:37,407 [INFO] src.services.venue_service - Retrieved 8 venues.
+2025-12-07 22:49:25,231 [INFO] src.services.participant_service - Participant created: id=15dacb02-f980-47d9-84f5-117ba04a74e1, name=Murad Aliyev
+2025-12-07 22:50:07,753 [INFO] src.services.participant_service - Participant created: id=dbbf3c86-0021-4562-ae2a-4384e1edb7b7, name=Lale Hasanli
+2025-12-07 22:50:13,562 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-07 22:50:27,703 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-07 22:51:47,026 [INFO] src.services.participant_service - Participant updated: id=15dacb02-f980-47d9-84f5-117ba04a74e1, name=Murad Ali
+2025-12-07 22:51:56,480 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-07 22:52:16,275 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-07 22:52:30,593 [INFO] src.repositories.participant_repository - Participant deleted: id=dbbf3c86-0021-4562-ae2a-4384e1edb7b7
+2025-12-07 22:52:30,593 [INFO] src.services.participant_service - Participant deleted: id=dbbf3c86-0021-4562-ae2a-4384e1edb7b7
+2025-12-07 22:52:47,256 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 22:54:52,500 [INFO] src.services.venue_service - Retrieved 8 venues.
+2025-12-07 22:55:01,635 [INFO] src.services.event_service - Event created: id=9339b210-402c-4d32-9dab-4e4265edc588, name=AI Conference
+2025-12-07 22:55:11,777 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 22:55:41,554 [INFO] src.services.venue_service - Retrieved 8 venues.
+2025-12-07 22:55:54,976 [INFO] src.services.event_service - Event updated: id=9339b210-402c-4d32-9dab-4e4265edc588, name=AI & Robotics Conference
+2025-12-07 22:56:15,068 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 22:56:32,886 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 22:56:48,938 [INFO] src.repositories.event_repository - Event deleted: id=9339b210-402c-4d32-9dab-4e4265edc588
+2025-12-07 22:56:48,938 [INFO] src.services.event_service - Event deleted: id=9339b210-402c-4d32-9dab-4e4265edc588
+2025-12-07 22:57:01,798 [INFO] src.services.event_service - Retrieved 5 events.
+2025-12-07 22:57:54,861 [INFO] src.services.venue_service - Retrieved 8 venues.
+2025-12-07 22:57:59,567 [INFO] src.services.event_service - Event created: id=c89c4b03-847e-45b3-92ee-a315f8eb54d1, name=Startup Pitch Day
+2025-12-07 22:58:12,001 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 22:58:45,612 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 22:59:06,185 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 22:59:12,996 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 22:59:41,657 [INFO] src.services.ticket_service - Ticket sold: id=ebf5a2fc-107f-47a5-8588-53cfd49cff84, type=Standard, base_price=100.00, final_price=100.00
+2025-12-07 22:59:47,747 [INFO] src.services.ticket_service - Retrieved 7 tickets.
+2025-12-07 22:59:59,064 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 23:00:03,001 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 23:00:32,315 [INFO] src.services.ticket_service - Ticket sold: id=2a37323f-86ea-4a64-b125-0df06522184f, type=VIP, base_price=100.00, final_price=150.00
+2025-12-07 23:00:37,549 [INFO] src.services.ticket_service - Retrieved 8 tickets.
+2025-12-07 23:00:44,476 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 23:00:52,797 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 23:01:10,134 [INFO] src.services.ticket_service - Ticket sold: id=95188c47-4668-47e9-ac34-95aaf1bad81c, type=Student, base_price=100.00, final_price=70.00
+2025-12-07 23:01:28,415 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-07 23:01:40,650 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-07 23:02:09,337 [INFO] src.services.ticket_service - Ticket updated: id=ebf5a2fc-107f-47a5-8588-53cfd49cff84, type=VIP, price=130.00
+2025-12-07 23:02:24,106 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-07 23:02:34,590 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-07 23:02:46,999 [INFO] src.services.ticket_service - Ticket updated: id=ebf5a2fc-107f-47a5-8588-53cfd49cff84, type=VIP, price=130.00
+2025-12-07 23:02:53,919 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-07 23:02:59,927 [INFO] src.repositories.ticket_repository - Ticket deleted: id=95188c47-4668-47e9-ac34-95aaf1bad81c
+2025-12-07 23:02:59,927 [INFO] src.services.ticket_service - Ticket deleted: id=95188c47-4668-47e9-ac34-95aaf1bad81c
+2025-12-07 23:03:02,761 [INFO] src.services.ticket_service - Retrieved 8 tickets.
+2025-12-07 23:03:26,864 [ERROR] src.controllers.cli_controller - Error while creating participant: Age must be a positive integer.
+2025-12-07 23:03:45,859 [ERROR] src.controllers.cli_controller - Error while creating participant: Age must be a positive integer.
+2025-12-07 23:03:50,977 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-07 23:03:53,228 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-07 23:03:59,509 [ERROR] src.controllers.cli_controller - Error while selling ticket: Price must be a non-negative number.
+2025-12-07 23:04:24,619 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-07 23:04:24,620 [INFO] __main__ - Application stopped.
