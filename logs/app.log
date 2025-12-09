@@ -482,3 +482,346 @@
 2025-12-07 23:03:59,509 [ERROR] src.controllers.cli_controller - Error while selling ticket: Price must be a non-negative number.
 2025-12-07 23:04:24,619 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
 2025-12-07 23:04:24,620 [INFO] __main__ - Application stopped.
+2025-12-09 17:18:55,486 [INFO] __main__ - Starting Event Management System...
+2025-12-09 17:18:55,490 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 17:18:55,490 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 17:19:47,127 [INFO] src.services.venue_service - Venue created: id=8c38cfca-81ce-46c3-96a5-3b3730b4bd41, name=Orion Hall
+2025-12-09 17:21:23,630 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-09 17:21:47,090 [ERROR] src.controllers.cli_controller - Error while creating venue: Capacity must be positive.
+2025-12-09 17:26:12,344 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-09 17:26:43,829 [INFO] src.services.venue_service - Venue created: id=62131d4e-45c8-4223-af11-17d68fd3d9ed, name=Test Hall
+2025-12-09 17:26:46,484 [INFO] src.services.venue_service - Retrieved 10 venues.
+2025-12-09 17:31:52,547 [INFO] src.services.participant_service - Participant created: id=53ec0ef8-95c3-45d1-8448-a117ff986a14, name=Murad Aliyev
+2025-12-09 17:31:58,428 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-09 17:33:07,444 [ERROR] src.controllers.cli_controller - Error while creating participant: Age must be a positive integer.
+2025-12-09 17:38:24,676 [ERROR] src.controllers.cli_controller - Error while creating venue: Capacity must be a positive integer.
+2025-12-09 17:39:14,721 [INFO] src.services.participant_service - Participant created: id=82e2d315-30a5-4fd0-aa35-4b336a2bbbf4, name=asdfgd
+2025-12-09 17:44:35,706 [ERROR] src.controllers.cli_controller - Error while creating event: Duration must be a positive integer.
+2025-12-09 17:45:32,965 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-09 17:46:33,172 [ERROR] src.controllers.cli_controller - Error while selling ticket: Event index out of range.
+2025-12-09 17:46:39,355 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-09 17:46:40,596 [INFO] src.services.participant_service - Retrieved 8 participants.
+2025-12-09 17:46:43,085 [ERROR] src.controllers.cli_controller - Error while selling ticket: Participant index out of range.
+2025-12-09 17:46:46,461 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-09 17:46:49,025 [INFO] src.services.participant_service - Retrieved 8 participants.
+2025-12-09 18:12:57,979 [INFO] __main__ - Starting Event Management System...
+2025-12-09 18:12:57,981 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 18:12:57,981 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 18:24:47,029 [INFO] __main__ - Starting Event Management System...
+2025-12-09 18:24:47,031 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 18:24:47,031 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 18:25:08,698 [INFO] src.services.venue_service - Venue created: id=0e7b8362-8361-4f1f-9ad8-ab25d164d85a, name=Adsf
+2025-12-09 18:26:39,671 [INFO] src.services.participant_service - Participant created: id=40eb19fd-e55f-4cf0-8cab-803c7742e610, name=Nihad Izzatli Dd
+2025-12-09 18:27:52,092 [INFO] src.services.venue_service - Retrieved 11 venues.
+2025-12-09 18:27:56,867 [INFO] src.services.event_service - Event created: id=8c3dc9c0-bec0-4194-be2f-e354d97055f3, name=sdfg
+2025-12-09 18:28:03,301 [INFO] src.services.event_service - Retrieved 7 events.
+2025-12-09 18:28:05,305 [INFO] src.services.participant_service - Retrieved 9 participants.
+2025-12-09 18:28:25,802 [INFO] src.services.ticket_service - Ticket sold: id=a84f0047-8a60-438e-a7b4-92661ee64066, type=asdf, base_price=0.00, final_price=0.00
+2025-12-09 18:28:35,821 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 18:28:35,821 [INFO] __main__ - Application stopped.
+2025-12-09 19:17:13,486 [INFO] __main__ - Starting Event Management System...
+2025-12-09 19:17:13,488 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 19:17:13,488 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 19:17:15,340 [INFO] src.services.venue_service - Retrieved 11 venues.
+2025-12-09 19:17:23,613 [INFO] src.services.event_service - Retrieved 7 events.
+2025-12-09 19:17:30,870 [INFO] src.services.participant_service - Retrieved 9 participants.
+2025-12-09 19:17:40,153 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-09 19:17:44,894 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 19:17:44,895 [INFO] __main__ - Application stopped.
+2025-12-09 22:59:29,102 [INFO] __main__ - Starting Event Management System...
+2025-12-09 22:59:29,104 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 22:59:29,104 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 22:59:33,138 [INFO] src.services.venue_service - Retrieved 11 venues.
+2025-12-09 22:59:37,046 [INFO] src.repositories.venue_repository - Venue deleted: id=17625cb3-234b-4648-9881-933ddb126cfc
+2025-12-09 22:59:37,046 [INFO] src.services.venue_service - Venue deleted: id=17625cb3-234b-4648-9881-933ddb126cfc
+2025-12-09 22:59:39,088 [INFO] src.services.venue_service - Retrieved 10 venues.
+2025-12-09 22:59:41,482 [INFO] src.repositories.venue_repository - Venue deleted: id=5e87259e-775b-4079-bd7e-9594a49b6e09
+2025-12-09 22:59:41,482 [INFO] src.services.venue_service - Venue deleted: id=5e87259e-775b-4079-bd7e-9594a49b6e09
+2025-12-09 22:59:44,376 [INFO] src.services.venue_service - Retrieved 9 venues.
+2025-12-09 22:59:46,761 [INFO] src.repositories.venue_repository - Venue deleted: id=b0fb5528-a63e-43e0-9f90-192767dbeb0b
+2025-12-09 22:59:46,761 [INFO] src.services.venue_service - Venue deleted: id=b0fb5528-a63e-43e0-9f90-192767dbeb0b
+2025-12-09 22:59:49,857 [INFO] src.services.venue_service - Retrieved 8 venues.
+2025-12-09 22:59:51,452 [INFO] src.repositories.venue_repository - Venue deleted: id=0e84cb5e-7c06-4b0d-bc6a-36ce0f941904
+2025-12-09 22:59:51,453 [INFO] src.services.venue_service - Venue deleted: id=0e84cb5e-7c06-4b0d-bc6a-36ce0f941904
+2025-12-09 22:59:53,556 [INFO] src.services.venue_service - Retrieved 7 venues.
+2025-12-09 23:00:02,454 [INFO] src.services.venue_service - Retrieved 7 venues.
+2025-12-09 23:00:04,534 [INFO] src.repositories.venue_repository - Venue deleted: id=58ca99db-9383-4be8-bdcc-a4f20d268083
+2025-12-09 23:00:04,534 [INFO] src.services.venue_service - Venue deleted: id=58ca99db-9383-4be8-bdcc-a4f20d268083
+2025-12-09 23:00:07,225 [INFO] src.services.venue_service - Retrieved 6 venues.
+2025-12-09 23:00:08,865 [INFO] src.repositories.venue_repository - Venue deleted: id=4e77df47-83fc-44a7-b3ef-22dbad294b0f
+2025-12-09 23:00:08,865 [INFO] src.services.venue_service - Venue deleted: id=4e77df47-83fc-44a7-b3ef-22dbad294b0f
+2025-12-09 23:00:10,077 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:00:11,156 [INFO] src.repositories.venue_repository - Venue deleted: id=2866a4bb-ac42-42ce-89dc-e5a6b5b1e7ef
+2025-12-09 23:00:11,156 [INFO] src.services.venue_service - Venue deleted: id=2866a4bb-ac42-42ce-89dc-e5a6b5b1e7ef
+2025-12-09 23:00:12,596 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:00:13,768 [INFO] src.repositories.venue_repository - Venue deleted: id=257a8387-730c-47dd-846f-13a545816e15
+2025-12-09 23:00:13,768 [INFO] src.services.venue_service - Venue deleted: id=257a8387-730c-47dd-846f-13a545816e15
+2025-12-09 23:00:15,050 [INFO] src.services.venue_service - Retrieved 3 venues.
+2025-12-09 23:00:16,210 [INFO] src.repositories.venue_repository - Venue deleted: id=8c38cfca-81ce-46c3-96a5-3b3730b4bd41
+2025-12-09 23:00:16,210 [INFO] src.services.venue_service - Venue deleted: id=8c38cfca-81ce-46c3-96a5-3b3730b4bd41
+2025-12-09 23:00:18,187 [INFO] src.services.venue_service - Retrieved 2 venues.
+2025-12-09 23:00:19,750 [INFO] src.repositories.venue_repository - Venue deleted: id=62131d4e-45c8-4223-af11-17d68fd3d9ed
+2025-12-09 23:00:19,750 [INFO] src.services.venue_service - Venue deleted: id=62131d4e-45c8-4223-af11-17d68fd3d9ed
+2025-12-09 23:00:21,399 [INFO] src.services.venue_service - Retrieved 1 venues.
+2025-12-09 23:00:23,043 [INFO] src.repositories.venue_repository - Venue deleted: id=0e7b8362-8361-4f1f-9ad8-ab25d164d85a
+2025-12-09 23:00:23,043 [INFO] src.services.venue_service - Venue deleted: id=0e7b8362-8361-4f1f-9ad8-ab25d164d85a
+2025-12-09 23:00:24,554 [INFO] src.services.venue_service - Retrieved 0 venues.
+2025-12-09 23:00:28,397 [INFO] src.services.event_service - Retrieved 7 events.
+2025-12-09 23:00:31,799 [INFO] src.services.event_service - Retrieved 7 events.
+2025-12-09 23:00:34,119 [INFO] src.repositories.event_repository - Event deleted: id=82488d7d-701d-473f-aee9-83e8c569650b
+2025-12-09 23:00:34,119 [INFO] src.services.event_service - Event deleted: id=82488d7d-701d-473f-aee9-83e8c569650b
+2025-12-09 23:00:35,219 [INFO] src.services.event_service - Retrieved 6 events.
+2025-12-09 23:00:36,550 [INFO] src.repositories.event_repository - Event deleted: id=19908cf3-2d6e-4f3f-8801-dcf4359d2d7b
+2025-12-09 23:00:36,551 [INFO] src.services.event_service - Event deleted: id=19908cf3-2d6e-4f3f-8801-dcf4359d2d7b
+2025-12-09 23:00:37,384 [INFO] src.services.event_service - Retrieved 5 events.
+2025-12-09 23:00:38,798 [INFO] src.repositories.event_repository - Event deleted: id=fa343723-06c9-46ed-b708-d587fe2189bf
+2025-12-09 23:00:38,798 [INFO] src.services.event_service - Event deleted: id=fa343723-06c9-46ed-b708-d587fe2189bf
+2025-12-09 23:00:39,578 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:00:40,785 [INFO] src.repositories.event_repository - Event deleted: id=2e58cdb5-9cdb-470e-8671-67532cd5d855
+2025-12-09 23:00:40,785 [INFO] src.services.event_service - Event deleted: id=2e58cdb5-9cdb-470e-8671-67532cd5d855
+2025-12-09 23:00:41,643 [INFO] src.services.event_service - Retrieved 3 events.
+2025-12-09 23:00:43,000 [INFO] src.repositories.event_repository - Event deleted: id=b212af21-f236-48d0-a12f-ce14b9aa5e6a
+2025-12-09 23:00:43,000 [INFO] src.services.event_service - Event deleted: id=b212af21-f236-48d0-a12f-ce14b9aa5e6a
+2025-12-09 23:00:43,922 [INFO] src.services.event_service - Retrieved 2 events.
+2025-12-09 23:00:45,084 [INFO] src.repositories.event_repository - Event deleted: id=c89c4b03-847e-45b3-92ee-a315f8eb54d1
+2025-12-09 23:00:45,084 [INFO] src.services.event_service - Event deleted: id=c89c4b03-847e-45b3-92ee-a315f8eb54d1
+2025-12-09 23:00:46,338 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:00:48,038 [INFO] src.repositories.event_repository - Event deleted: id=8c3dc9c0-bec0-4194-be2f-e354d97055f3
+2025-12-09 23:00:48,039 [INFO] src.services.event_service - Event deleted: id=8c3dc9c0-bec0-4194-be2f-e354d97055f3
+2025-12-09 23:00:48,896 [INFO] src.services.event_service - Retrieved 0 events.
+2025-12-09 23:01:18,982 [INFO] src.services.participant_service - Retrieved 9 participants.
+2025-12-09 23:01:23,650 [INFO] src.services.participant_service - Retrieved 9 participants.
+2025-12-09 23:01:25,731 [INFO] src.repositories.participant_repository - Participant deleted: id=3579f3a6-e339-4335-a0f8-944b86ef9c71
+2025-12-09 23:01:25,732 [INFO] src.services.participant_service - Participant deleted: id=3579f3a6-e339-4335-a0f8-944b86ef9c71
+2025-12-09 23:01:26,585 [INFO] src.services.participant_service - Retrieved 8 participants.
+2025-12-09 23:01:27,475 [INFO] src.repositories.participant_repository - Participant deleted: id=b503d131-ff6c-413b-89d6-5bfcee7eee43
+2025-12-09 23:01:27,475 [INFO] src.services.participant_service - Participant deleted: id=b503d131-ff6c-413b-89d6-5bfcee7eee43
+2025-12-09 23:01:28,373 [INFO] src.services.participant_service - Retrieved 7 participants.
+2025-12-09 23:01:29,704 [INFO] src.repositories.participant_repository - Participant deleted: id=8b56943a-988e-4f36-8845-3430123ac502
+2025-12-09 23:01:29,704 [INFO] src.services.participant_service - Participant deleted: id=8b56943a-988e-4f36-8845-3430123ac502
+2025-12-09 23:01:30,804 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-09 23:01:31,840 [ERROR] src.controllers.cli_controller - Error while deleting participant: Invalid selection.
+2025-12-09 23:01:33,156 [INFO] src.services.participant_service - Retrieved 6 participants.
+2025-12-09 23:01:34,856 [INFO] src.repositories.participant_repository - Participant deleted: id=e9bcb8aa-8a99-4cf3-b154-4623b2db1c29
+2025-12-09 23:01:34,856 [INFO] src.services.participant_service - Participant deleted: id=e9bcb8aa-8a99-4cf3-b154-4623b2db1c29
+2025-12-09 23:01:35,813 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:01:37,781 [INFO] src.repositories.participant_repository - Participant deleted: id=d7844bd4-2b11-440e-9591-1669e482ba0b
+2025-12-09 23:01:37,781 [INFO] src.services.participant_service - Participant deleted: id=d7844bd4-2b11-440e-9591-1669e482ba0b
+2025-12-09 23:01:38,628 [INFO] src.services.participant_service - Retrieved 4 participants.
+2025-12-09 23:01:40,627 [INFO] src.repositories.participant_repository - Participant deleted: id=15dacb02-f980-47d9-84f5-117ba04a74e1
+2025-12-09 23:01:40,627 [INFO] src.services.participant_service - Participant deleted: id=15dacb02-f980-47d9-84f5-117ba04a74e1
+2025-12-09 23:01:41,582 [INFO] src.services.participant_service - Retrieved 3 participants.
+2025-12-09 23:01:43,154 [ERROR] src.controllers.cli_controller - Error while deleting participant: Invalid selection.
+2025-12-09 23:01:44,830 [INFO] src.services.participant_service - Retrieved 3 participants.
+2025-12-09 23:01:45,976 [INFO] src.repositories.participant_repository - Participant deleted: id=53ec0ef8-95c3-45d1-8448-a117ff986a14
+2025-12-09 23:01:45,977 [INFO] src.services.participant_service - Participant deleted: id=53ec0ef8-95c3-45d1-8448-a117ff986a14
+2025-12-09 23:01:46,772 [INFO] src.services.participant_service - Retrieved 2 participants.
+2025-12-09 23:01:49,298 [INFO] src.repositories.participant_repository - Participant deleted: id=82e2d315-30a5-4fd0-aa35-4b336a2bbbf4
+2025-12-09 23:01:49,298 [INFO] src.services.participant_service - Participant deleted: id=82e2d315-30a5-4fd0-aa35-4b336a2bbbf4
+2025-12-09 23:01:50,357 [INFO] src.services.participant_service - Retrieved 1 participants.
+2025-12-09 23:01:52,902 [INFO] src.repositories.participant_repository - Participant deleted: id=40eb19fd-e55f-4cf0-8cab-803c7742e610
+2025-12-09 23:01:52,902 [INFO] src.services.participant_service - Participant deleted: id=40eb19fd-e55f-4cf0-8cab-803c7742e610
+2025-12-09 23:02:00,766 [INFO] src.services.participant_service - Retrieved 0 participants.
+2025-12-09 23:02:04,784 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-09 23:02:07,560 [INFO] src.services.ticket_service - Retrieved 9 tickets.
+2025-12-09 23:02:09,223 [INFO] src.repositories.ticket_repository - Ticket deleted: id=63ef0a6c-ded1-4722-9ea8-3036f27581a3
+2025-12-09 23:02:09,223 [INFO] src.services.ticket_service - Ticket deleted: id=63ef0a6c-ded1-4722-9ea8-3036f27581a3
+2025-12-09 23:02:10,164 [INFO] src.services.ticket_service - Retrieved 8 tickets.
+2025-12-09 23:02:11,005 [INFO] src.repositories.ticket_repository - Ticket deleted: id=085cb188-5b5b-47fa-9261-b9b516f50604
+2025-12-09 23:02:11,005 [INFO] src.services.ticket_service - Ticket deleted: id=085cb188-5b5b-47fa-9261-b9b516f50604
+2025-12-09 23:02:12,231 [INFO] src.services.ticket_service - Retrieved 7 tickets.
+2025-12-09 23:02:14,170 [INFO] src.repositories.ticket_repository - Ticket deleted: id=4e6458cd-e85f-43c1-ab35-3542c161933a
+2025-12-09 23:02:14,171 [INFO] src.services.ticket_service - Ticket deleted: id=4e6458cd-e85f-43c1-ab35-3542c161933a
+2025-12-09 23:02:15,227 [INFO] src.services.ticket_service - Retrieved 6 tickets.
+2025-12-09 23:02:18,671 [INFO] src.services.ticket_service - Retrieved 6 tickets.
+2025-12-09 23:02:19,657 [INFO] src.repositories.ticket_repository - Ticket deleted: id=5eb2e957-a7f7-4bd3-ba6e-267f6d9747f9
+2025-12-09 23:02:19,658 [INFO] src.services.ticket_service - Ticket deleted: id=5eb2e957-a7f7-4bd3-ba6e-267f6d9747f9
+2025-12-09 23:02:20,608 [INFO] src.services.ticket_service - Retrieved 5 tickets.
+2025-12-09 23:02:21,698 [INFO] src.repositories.ticket_repository - Ticket deleted: id=92297099-36fd-46c5-98c0-c7a53d58f76d
+2025-12-09 23:02:21,698 [INFO] src.services.ticket_service - Ticket deleted: id=92297099-36fd-46c5-98c0-c7a53d58f76d
+2025-12-09 23:02:22,958 [INFO] src.services.ticket_service - Retrieved 4 tickets.
+2025-12-09 23:02:24,195 [INFO] src.repositories.ticket_repository - Ticket deleted: id=9a295d6a-1866-4813-b3bd-f561e7afdadf
+2025-12-09 23:02:24,195 [INFO] src.services.ticket_service - Ticket deleted: id=9a295d6a-1866-4813-b3bd-f561e7afdadf
+2025-12-09 23:02:25,479 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:02:26,549 [INFO] src.repositories.ticket_repository - Ticket deleted: id=ebf5a2fc-107f-47a5-8588-53cfd49cff84
+2025-12-09 23:02:26,549 [INFO] src.services.ticket_service - Ticket deleted: id=ebf5a2fc-107f-47a5-8588-53cfd49cff84
+2025-12-09 23:02:27,850 [INFO] src.services.ticket_service - Retrieved 2 tickets.
+2025-12-09 23:02:29,135 [INFO] src.repositories.ticket_repository - Ticket deleted: id=2a37323f-86ea-4a64-b125-0df06522184f
+2025-12-09 23:02:29,135 [INFO] src.services.ticket_service - Ticket deleted: id=2a37323f-86ea-4a64-b125-0df06522184f
+2025-12-09 23:02:30,173 [INFO] src.services.ticket_service - Retrieved 1 tickets.
+2025-12-09 23:02:32,360 [INFO] src.repositories.ticket_repository - Ticket deleted: id=a84f0047-8a60-438e-a7b4-92661ee64066
+2025-12-09 23:02:32,360 [INFO] src.services.ticket_service - Ticket deleted: id=a84f0047-8a60-438e-a7b4-92661ee64066
+2025-12-09 23:02:35,386 [INFO] src.services.venue_service - Retrieved 0 venues.
+2025-12-09 23:02:39,264 [INFO] src.services.event_service - Retrieved 0 events.
+2025-12-09 23:02:41,392 [INFO] src.services.participant_service - Retrieved 0 participants.
+2025-12-09 23:02:44,600 [INFO] src.services.ticket_service - Retrieved 0 tickets.
+2025-12-09 23:02:47,479 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 23:02:47,480 [INFO] __main__ - Application stopped.
+2025-12-09 23:07:01,357 [INFO] __main__ - Starting Event Management System...
+2025-12-09 23:07:01,360 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 23:07:01,360 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 23:07:56,473 [INFO] src.services.venue_service - Venue created: id=7e32798d-ab82-46e3-add6-8f553c9327a8, name=Heydar     eliyev      zali
+2025-12-09 23:09:11,457 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 23:09:11,459 [INFO] __main__ - Application stopped.
+2025-12-09 23:09:38,429 [INFO] __main__ - Starting Event Management System...
+2025-12-09 23:09:38,430 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 23:09:38,430 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 23:10:31,986 [INFO] src.services.venue_service - Venue created: id=df04242a-6382-4e55-85bf-35266280a6fd, name=Heydar eliyev zali
+2025-12-09 23:11:08,747 [INFO] src.services.venue_service - Venue created: id=6062330a-e071-46e7-a400-513cdadae1b4, name=Test venue
+2025-12-09 23:11:41,649 [INFO] src.services.venue_service - Venue created: id=65bcf060-7a91-4539-8b98-f02c698cdd23, name=Test venue 2
+2025-12-09 23:12:14,315 [INFO] src.services.venue_service - Venue created: id=e8a574af-418e-45b8-a04d-c90e1d30e437, name=Sample hall
+2025-12-09 23:12:55,888 [INFO] src.services.participant_service - Participant created: id=897cf888-4163-43b2-a892-6fe2abe2e55f, name=Nihad Izzatli
+2025-12-09 23:13:41,072 [INFO] src.services.participant_service - Participant created: id=9d683ad5-537b-4ded-8fd3-e13c1f4c34d2, name=Test User
+2025-12-09 23:14:20,744 [INFO] src.services.participant_service - Participant created: id=194ba29f-1a59-4558-97ba-2842b8706b82, name=Phone Test
+2025-12-09 23:14:57,635 [INFO] src.services.participant_service - Participant created: id=a34abf5f-58bd-47df-b43f-1a5cf2c08ed5, name=Age Test
+2025-12-09 23:15:49,610 [INFO] src.services.participant_service - Participant created: id=92484efd-8f7e-40aa-93dd-87ad6e167e04, name=Gender Test
+2025-12-09 23:16:23,510 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:16:32,057 [INFO] src.services.event_service - Event created: id=a70aa519-eab8-40c6-a6a1-90d509c69420, name=Python Bootcamp
+2025-12-09 23:17:17,111 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:17:21,641 [INFO] src.services.event_service - Event created: id=42944c08-5679-49d3-8454-e162a2ff8259, name=Wrong Date Event
+2025-12-09 23:17:53,378 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:17:57,247 [INFO] src.services.event_service - Event created: id=69f42192-a929-4801-8c9d-230d18da0283, name=Wrong Time Event
+2025-12-09 23:18:34,299 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:18:36,933 [INFO] src.services.event_service - Event created: id=a4dfa63c-ca96-44f3-9c82-57257d34943a, name=Wrong Duration Event
+2025-12-09 23:18:41,368 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:18:47,293 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:19:09,580 [INFO] src.services.ticket_service - Ticket sold: id=69e7a247-d9c9-4cb4-9bb9-a766bfc5dba0, type=VIP, base_price=50.00, final_price=75.00
+2025-12-09 23:19:13,170 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:19:18,659 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:19:47,649 [INFO] src.services.ticket_service - Ticket sold: id=74ffedb9-9e0c-4d32-869a-93860e26cc4e, type=Student, base_price=30.00, final_price=21.00
+2025-12-09 23:19:57,341 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:20:04,192 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:20:39,433 [INFO] src.services.ticket_service - Ticket sold: id=f118c666-6664-43d0-800c-8534244eccdb, type=Standart, base_price=40.00, final_price=40.00
+2025-12-09 23:20:44,533 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:21:03,029 [ERROR] src.controllers.cli_controller - Error while updating venue: Capacity must be positive.
+2025-12-09 23:21:08,587 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:21:19,924 [INFO] src.services.participant_service - Participant updated: id=897cf888-4163-43b2-a892-6fe2abe2e55f, name=Nihad Izzatli
+2025-12-09 23:21:24,555 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:21:41,079 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:21:47,295 [INFO] src.services.event_service - Event updated: id=a70aa519-eab8-40c6-a6a1-90d509c69420, name=Python Bootcamp
+2025-12-09 23:21:50,866 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:22:25,850 [INFO] src.services.ticket_service - Ticket updated: id=69e7a247-d9c9-4cb4-9bb9-a766bfc5dba0, type=VIP, price=60.00
+2025-12-09 23:22:28,609 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:22:35,096 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:22:42,272 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:22:49,093 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:22:59,659 [INFO] src.services.venue_service - Retrieved 5 venues.
+2025-12-09 23:23:03,484 [INFO] src.repositories.venue_repository - Venue deleted: id=7e32798d-ab82-46e3-add6-8f553c9327a8
+2025-12-09 23:23:03,485 [INFO] src.services.venue_service - Venue deleted: id=7e32798d-ab82-46e3-add6-8f553c9327a8
+2025-12-09 23:23:06,150 [INFO] src.services.event_service - Retrieved 4 events.
+2025-12-09 23:23:07,913 [INFO] src.repositories.event_repository - Event deleted: id=a70aa519-eab8-40c6-a6a1-90d509c69420
+2025-12-09 23:23:07,913 [INFO] src.services.event_service - Event deleted: id=a70aa519-eab8-40c6-a6a1-90d509c69420
+2025-12-09 23:23:10,549 [INFO] src.services.participant_service - Retrieved 5 participants.
+2025-12-09 23:23:11,861 [INFO] src.repositories.participant_repository - Participant deleted: id=897cf888-4163-43b2-a892-6fe2abe2e55f
+2025-12-09 23:23:11,861 [INFO] src.services.participant_service - Participant deleted: id=897cf888-4163-43b2-a892-6fe2abe2e55f
+2025-12-09 23:23:13,509 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:23:14,869 [INFO] src.repositories.ticket_repository - Ticket deleted: id=69e7a247-d9c9-4cb4-9bb9-a766bfc5dba0
+2025-12-09 23:23:14,869 [INFO] src.services.ticket_service - Ticket deleted: id=69e7a247-d9c9-4cb4-9bb9-a766bfc5dba0
+2025-12-09 23:23:17,974 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:23:23,050 [INFO] src.services.event_service - Retrieved 3 events.
+2025-12-09 23:23:27,321 [INFO] src.services.participant_service - Retrieved 4 participants.
+2025-12-09 23:23:33,085 [INFO] src.services.ticket_service - Retrieved 2 tickets.
+2025-12-09 23:27:05,376 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 23:27:05,378 [INFO] __main__ - Application stopped.
+2025-12-09 23:27:17,810 [INFO] __main__ - Starting Event Management System...
+2025-12-09 23:27:17,811 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 23:27:17,811 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 23:27:20,075 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:27:21,302 [INFO] src.repositories.venue_repository - Venue deleted: id=df04242a-6382-4e55-85bf-35266280a6fd
+2025-12-09 23:27:21,303 [INFO] src.services.venue_service - Venue deleted: id=df04242a-6382-4e55-85bf-35266280a6fd
+2025-12-09 23:27:22,032 [INFO] src.services.venue_service - Retrieved 3 venues.
+2025-12-09 23:27:22,963 [INFO] src.repositories.venue_repository - Venue deleted: id=6062330a-e071-46e7-a400-513cdadae1b4
+2025-12-09 23:27:22,963 [INFO] src.services.venue_service - Venue deleted: id=6062330a-e071-46e7-a400-513cdadae1b4
+2025-12-09 23:27:23,571 [INFO] src.services.venue_service - Retrieved 2 venues.
+2025-12-09 23:27:24,509 [INFO] src.repositories.venue_repository - Venue deleted: id=65bcf060-7a91-4539-8b98-f02c698cdd23
+2025-12-09 23:27:24,509 [INFO] src.services.venue_service - Venue deleted: id=65bcf060-7a91-4539-8b98-f02c698cdd23
+2025-12-09 23:27:25,407 [INFO] src.services.venue_service - Retrieved 1 venues.
+2025-12-09 23:27:26,612 [INFO] src.repositories.venue_repository - Venue deleted: id=e8a574af-418e-45b8-a04d-c90e1d30e437
+2025-12-09 23:27:26,612 [INFO] src.services.venue_service - Venue deleted: id=e8a574af-418e-45b8-a04d-c90e1d30e437
+2025-12-09 23:27:29,654 [INFO] src.services.event_service - Retrieved 3 events.
+2025-12-09 23:27:30,623 [INFO] src.repositories.event_repository - Event deleted: id=42944c08-5679-49d3-8454-e162a2ff8259
+2025-12-09 23:27:30,623 [INFO] src.services.event_service - Event deleted: id=42944c08-5679-49d3-8454-e162a2ff8259
+2025-12-09 23:27:31,646 [INFO] src.services.event_service - Retrieved 2 events.
+2025-12-09 23:27:32,806 [INFO] src.repositories.event_repository - Event deleted: id=69f42192-a929-4801-8c9d-230d18da0283
+2025-12-09 23:27:32,807 [INFO] src.services.event_service - Event deleted: id=69f42192-a929-4801-8c9d-230d18da0283
+2025-12-09 23:27:34,136 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:27:35,495 [INFO] src.repositories.event_repository - Event deleted: id=a4dfa63c-ca96-44f3-9c82-57257d34943a
+2025-12-09 23:27:35,495 [INFO] src.services.event_service - Event deleted: id=a4dfa63c-ca96-44f3-9c82-57257d34943a
+2025-12-09 23:27:38,861 [INFO] src.services.venue_service - Retrieved 0 venues.
+2025-12-09 23:27:41,469 [INFO] src.services.event_service - Retrieved 0 events.
+2025-12-09 23:27:46,512 [INFO] src.services.participant_service - Retrieved 4 participants.
+2025-12-09 23:27:47,827 [INFO] src.repositories.participant_repository - Participant deleted: id=9d683ad5-537b-4ded-8fd3-e13c1f4c34d2
+2025-12-09 23:27:47,827 [INFO] src.services.participant_service - Participant deleted: id=9d683ad5-537b-4ded-8fd3-e13c1f4c34d2
+2025-12-09 23:27:48,480 [INFO] src.services.participant_service - Retrieved 3 participants.
+2025-12-09 23:27:49,374 [INFO] src.repositories.participant_repository - Participant deleted: id=194ba29f-1a59-4558-97ba-2842b8706b82
+2025-12-09 23:27:49,374 [INFO] src.services.participant_service - Participant deleted: id=194ba29f-1a59-4558-97ba-2842b8706b82
+2025-12-09 23:27:50,143 [INFO] src.services.participant_service - Retrieved 2 participants.
+2025-12-09 23:27:51,667 [INFO] src.repositories.participant_repository - Participant deleted: id=a34abf5f-58bd-47df-b43f-1a5cf2c08ed5
+2025-12-09 23:27:51,668 [INFO] src.services.participant_service - Participant deleted: id=a34abf5f-58bd-47df-b43f-1a5cf2c08ed5
+2025-12-09 23:27:52,642 [INFO] src.services.participant_service - Retrieved 1 participants.
+2025-12-09 23:27:53,753 [INFO] src.repositories.participant_repository - Participant deleted: id=92484efd-8f7e-40aa-93dd-87ad6e167e04
+2025-12-09 23:27:53,753 [INFO] src.services.participant_service - Participant deleted: id=92484efd-8f7e-40aa-93dd-87ad6e167e04
+2025-12-09 23:27:57,141 [INFO] src.services.ticket_service - Retrieved 2 tickets.
+2025-12-09 23:27:58,391 [INFO] src.repositories.ticket_repository - Ticket deleted: id=74ffedb9-9e0c-4d32-869a-93860e26cc4e
+2025-12-09 23:27:58,391 [INFO] src.services.ticket_service - Ticket deleted: id=74ffedb9-9e0c-4d32-869a-93860e26cc4e
+2025-12-09 23:27:59,395 [INFO] src.services.ticket_service - Retrieved 1 tickets.
+2025-12-09 23:28:00,799 [INFO] src.repositories.ticket_repository - Ticket deleted: id=f118c666-6664-43d0-800c-8534244eccdb
+2025-12-09 23:28:00,799 [INFO] src.services.ticket_service - Ticket deleted: id=f118c666-6664-43d0-800c-8534244eccdb
+2025-12-09 23:28:03,071 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 23:28:03,072 [INFO] __main__ - Application stopped.
+2025-12-09 23:28:23,098 [INFO] __main__ - Starting Event Management System...
+2025-12-09 23:28:23,100 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 23:28:23,100 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 23:28:43,999 [INFO] src.services.venue_service - Venue created: id=e1f6cbc4-7fdb-4957-b7af-fa11a78e7bf7, name=Orion hall
+2025-12-09 23:29:11,417 [INFO] src.services.venue_service - Venue created: id=ee042856-14e2-4f3f-87d0-18832af2527b, name=Zenith center
+2025-12-09 23:29:13,649 [INFO] src.services.venue_service - Retrieved 2 venues.
+2025-12-09 23:29:17,708 [INFO] src.services.venue_service - Retrieved 2 venues.
+2025-12-09 23:30:20,087 [INFO] __main__ - Starting Event Management System...
+2025-12-09 23:30:20,090 [INFO] src.database.schema - Database schema initialized successfully.
+2025-12-09 23:30:20,090 [INFO] src.controllers.cli_controller - CLIController started.
+2025-12-09 23:30:37,263 [INFO] src.services.venue_service - Venue created: id=2f925044-ff9e-42bf-85c9-9e2deca795d4, name=Orion hall
+2025-12-09 23:30:56,665 [INFO] src.services.venue_service - Venue created: id=98b93887-46b7-4d00-8763-64f44bd17530, name=Zenith center
+2025-12-09 23:30:59,394 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:31:03,246 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:31:21,721 [INFO] src.services.venue_service - Venue updated: id=e1f6cbc4-7fdb-4957-b7af-fa11a78e7bf7, name=orion Hall pro
+2025-12-09 23:31:25,531 [INFO] src.services.venue_service - Retrieved 4 venues.
+2025-12-09 23:31:28,944 [INFO] src.repositories.venue_repository - Venue deleted: id=ee042856-14e2-4f3f-87d0-18832af2527b
+2025-12-09 23:31:28,944 [INFO] src.services.venue_service - Venue deleted: id=ee042856-14e2-4f3f-87d0-18832af2527b
+2025-12-09 23:32:06,561 [INFO] src.services.participant_service - Participant created: id=3cd08c2b-1fc7-4327-ae59-89b9efa16a43, name=Murad Aliyev
+2025-12-09 23:32:37,217 [INFO] src.services.participant_service - Participant created: id=421126d3-a0dd-45fc-a23e-0ea408948307, name=Lale Hasanli
+2025-12-09 23:32:39,429 [INFO] src.services.participant_service - Retrieved 2 participants.
+2025-12-09 23:33:02,415 [INFO] src.services.participant_service - Participant updated: id=3cd08c2b-1fc7-4327-ae59-89b9efa16a43, name=Murad Ali
+2025-12-09 23:33:05,894 [INFO] src.services.participant_service - Retrieved 2 participants.
+2025-12-09 23:33:11,239 [INFO] src.repositories.participant_repository - Participant deleted: id=421126d3-a0dd-45fc-a23e-0ea408948307
+2025-12-09 23:33:11,239 [INFO] src.services.participant_service - Participant deleted: id=421126d3-a0dd-45fc-a23e-0ea408948307
+2025-12-09 23:33:41,800 [INFO] src.services.venue_service - Retrieved 3 venues.
+2025-12-09 23:33:50,894 [INFO] src.services.event_service - Event created: id=c2a2ddef-82eb-44b0-aaac-260b9aaed679, name=AI Conference
+2025-12-09 23:33:54,060 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:33:59,943 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:34:30,566 [INFO] src.services.venue_service - Retrieved 3 venues.
+2025-12-09 23:34:42,955 [INFO] src.services.event_service - Event updated: id=c2a2ddef-82eb-44b0-aaac-260b9aaed679, name=AI and Robotics
+2025-12-09 23:34:46,341 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:34:48,709 [INFO] src.repositories.event_repository - Event deleted: id=c2a2ddef-82eb-44b0-aaac-260b9aaed679
+2025-12-09 23:34:48,709 [INFO] src.services.event_service - Event deleted: id=c2a2ddef-82eb-44b0-aaac-260b9aaed679
+2025-12-09 23:35:24,248 [INFO] src.services.venue_service - Retrieved 3 venues.
+2025-12-09 23:35:27,008 [INFO] src.services.event_service - Event created: id=cac3be8d-e668-4646-8a36-79afb9c5da2a, name=Startup Pitch Day
+2025-12-09 23:35:30,043 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:35:30,791 [INFO] src.services.participant_service - Retrieved 1 participants.
+2025-12-09 23:35:51,977 [INFO] src.services.ticket_service - Ticket sold: id=e95339e2-dfa3-4ae5-a3d2-5d4e24e70e03, type=Standart, base_price=100.00, final_price=100.00
+2025-12-09 23:35:57,093 [INFO] src.services.ticket_service - Retrieved 1 tickets.
+2025-12-09 23:36:00,766 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:36:03,157 [INFO] src.services.participant_service - Retrieved 1 participants.
+2025-12-09 23:36:18,419 [INFO] src.services.ticket_service - Ticket sold: id=5d925e01-1fb5-4e33-8584-f85729b6b87a, type=VIP, base_price=100.00, final_price=150.00
+2025-12-09 23:36:19,838 [INFO] src.services.ticket_service - Retrieved 2 tickets.
+2025-12-09 23:36:22,914 [INFO] src.services.event_service - Retrieved 1 events.
+2025-12-09 23:36:25,524 [INFO] src.services.participant_service - Retrieved 1 participants.
+2025-12-09 23:36:39,018 [INFO] src.services.ticket_service - Ticket sold: id=6076270a-03ea-4dc4-ae48-ad97fa3f4226, type=Student, base_price=100.00, final_price=70.00
+2025-12-09 23:36:43,989 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:37:00,396 [INFO] src.services.ticket_service - Ticket updated: id=e95339e2-dfa3-4ae5-a3d2-5d4e24e70e03, type=VIP, price=130.00
+2025-12-09 23:37:05,977 [INFO] src.services.ticket_service - Retrieved 3 tickets.
+2025-12-09 23:37:11,174 [INFO] src.repositories.ticket_repository - Ticket deleted: id=6076270a-03ea-4dc4-ae48-ad97fa3f4226
+2025-12-09 23:37:11,174 [INFO] src.services.ticket_service - Ticket deleted: id=6076270a-03ea-4dc4-ae48-ad97fa3f4226
+2025-12-09 23:37:16,485 [INFO] src.services.ticket_service - Retrieved 2 tickets.
+2025-12-09 23:38:00,261 [INFO] src.services.participant_service - Participant created: id=2794289f-8cef-4c08-a544-3ba0dd1b6230, name=Sdfsd
+2025-12-09 23:38:04,486 [INFO] src.controllers.cli_controller - User exited the application from CLIController.
+2025-12-09 23:38:04,486 [INFO] __main__ - Application stopped.

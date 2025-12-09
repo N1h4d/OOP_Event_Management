@@ -1,4 +1,17 @@
 # src/controllers/cli_controller.py
+from ..utils.validators import (
+    normalize_name,
+    normalize_full_name,
+    validate_positive_int,
+    validate_price,
+    validate_phone,
+    validate_email,
+    validate_gender,
+    validate_date,
+    validate_time,
+    validate_yes_no,
+)
+
 
 from ..logging_config import get_logger
 
@@ -107,18 +120,50 @@ class CLIController:
     # ===================== VENUE ===================== #
 
     def create_venue(self):
+        print("\n--- Create Venue ---")
         try:
-            print("\n--- Create Venue ---")
-            name = input("Venue name: ").strip()
-            address = input("Address: ").strip()
-            capacity_str = input("Capacity: ").strip()
-            manager_name = input("Manager name: ").strip()
-            phone = input("Phone: ").strip()
+            # Name
+            while True:
+                try:
+                    raw_name = input("Venue name: ")
+                    name = normalize_name(raw_name)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
-            if not capacity_str.isdigit():
-                raise ValueError("Capacity must be a positive integer.")
+            # Address (boş ola bilməz)
+            while True:
+                address = input("Address: ").strip()
+                if address:
+                    break
+                print("Error: Address is required.")
 
-            capacity = int(capacity_str)
+            # Capacity
+            while True:
+                try:
+                    raw_capacity = input("Capacity: ")
+                    capacity = validate_positive_int(raw_capacity, "Capacity")
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Manager name
+            while True:
+                try:
+                    raw_manager = input("Manager name: ")
+                    manager_name = normalize_full_name(raw_manager)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Phone
+            while True:
+                try:
+                    raw_phone = input("Phone (e.g. 0501234567): ")
+                    phone = validate_phone(raw_phone)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
             venue = self._venue_service.create_venue(
                 name=name,
@@ -132,8 +177,8 @@ class CLIController:
             print("\nVenue successfully created:")
             print(venue.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error while creating venue: {ex}")
             logger.error("Error while creating venue: %s", ex)
 
     def list_venues(self):
@@ -243,18 +288,42 @@ class CLIController:
     # ===================== EVENT ===================== #
 
     def create_event(self):
+        print("\n--- Create Event ---")
         try:
-            print("\n--- Create Event ---")
             name = input("Event name: ").strip()
-            date = input("Date (YYYY-MM-DD): ").strip()
-            time = input("Time (HH:MM): ").strip()
+            if not name:
+                print("Error: Event name is required.")
+                return
+
             category = input("Category: ").strip()
             description = input("Description: ").strip()
-            duration_str = input("Duration (minutes): ").strip()
 
-            if not duration_str.isdigit():
-                raise ValueError("Duration must be a positive integer.")
-            duration = int(duration_str)
+            # Date
+            while True:
+                try:
+                    raw_date = input("Date (YYYY-MM-DD): ")
+                    date = validate_date(raw_date)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Time
+            while True:
+                try:
+                    raw_time = input("Time (HH:MM): ")
+                    time = validate_time(raw_time)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Duration
+            while True:
+                try:
+                    raw_duration = input("Duration (minutes): ")
+                    duration = validate_positive_int(raw_duration, "Duration")
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
             # mövcud venue-ları göstər
             venues = self._venue_service.list_venues()
@@ -266,15 +335,17 @@ class CLIController:
             for idx, v in enumerate(venues, start=1):
                 print(f"{idx}. {v.name} (ID={v.id})")
 
-            venue_choice_str = input("Choose venue (number): ").strip()
-            if not venue_choice_str.isdigit():
-                raise ValueError("Invalid venue selection.")
-
-            venue_index = int(venue_choice_str) - 1
-            if venue_index < 0 or venue_index >= len(venues):
-                raise ValueError("Venue index out of range.")
-
-            selected_venue = venues[venue_index]
+            while True:
+                venue_choice_str = input("Choose venue (number): ").strip()
+                if not venue_choice_str.isdigit():
+                    print("Error: Invalid venue selection.")
+                    continue
+                venue_index = int(venue_choice_str) - 1
+                if venue_index < 0 or venue_index >= len(venues):
+                    print("Error: Venue index out of range.")
+                    continue
+                selected_venue = venues[venue_index]
+                break
 
             event = self._event_service.create_event(
                 name=name,
@@ -290,9 +361,10 @@ class CLIController:
             print("\nEvent successfully created:")
             print(event.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error while creating event: {ex}")
             logger.error("Error while creating event: %s", ex)
+
 
     def list_events(self):
         print("\n--- List of Events ---")
@@ -316,64 +388,102 @@ class CLIController:
             for idx, e in enumerate(events, start=1):
                 print(f"{idx}. {e.name} on {e.date} (ID={e.id})")
 
-            choice_str = input("Choose event to update (number): ").strip()
-            if not choice_str.isdigit():
-                raise ValueError("Invalid selection.")
-            index = int(choice_str) - 1
-            if index < 0 or index >= len(events):
-                raise ValueError("Index out of range.")
+            while True:
+                choice_str = input("Choose event to update (number): ").strip()
+                if not choice_str.isdigit():
+                    print("❌ Invalid selection.")
+                    continue
+                index = int(choice_str) - 1
+                if 0 <= index < len(events):
+                    selected = events[index]
+                    break
+                else:
+                    print("❌ Index out of range.")
 
-            selected = events[index]
+            print("\nPress Enter to keep current value.\n")
 
-            print("\nLeave field empty to keep current value.")
+            # NAME
+            raw = input(f"Name [{selected.name}]: ").strip()
+            name = raw if raw else selected.name
 
-            name = input(f"Name [{selected.name}]: ").strip() or selected.name
-            date = input(f"Date [{selected.date}]: ").strip() or selected.date
-            time = input(f"Time [{selected.time}]: ").strip() or selected.time
-            category = input(f"Category [{selected.category}]: ").strip() or selected.category
-            description = (
-                input(f"Description [{selected.description}]: ").strip()
-                or selected.description
-            )
+            # DATE
+            while True:
+                raw = input(f"Date [{selected.date}]: ").strip()
+                if raw == "":
+                    date = selected.date
+                    break
+                try:
+                    date = validate_date(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            duration_str = input(
-                f"Duration (minutes) [{selected.duration_minutes}]: "
-            ).strip()
-            duration = (
-                selected.duration_minutes
-                if duration_str == ""
-                else int(duration_str)
-            )
+            # TIME
+            while True:
+                raw = input(f"Time [{selected.time}]: ").strip()
+                if raw == "":
+                    time = selected.time
+                    break
+                try:
+                    time = validate_time(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            # Venue dəyişmək istəyirsə
+            # CATEGORY
+            raw = input(f"Category [{selected.category}]: ").strip()
+            category = raw if raw else selected.category
+
+            # DESCRIPTION
+            raw = input(f"Description [{selected.description}]: ").strip()
+            description = raw if raw else selected.description
+
+            # DURATION
+            while True:
+                raw = input(f"Duration [{selected.duration_minutes}]: ").strip()
+                if raw == "":
+                    duration = selected.duration_minutes
+                    break
+                try:
+                    duration = validate_positive_int(raw, "Duration")
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
+
+            # VENUE
             venues = self._venue_service.list_venues()
-            if not venues:
-                print("No venues found. Please create a venue first.")
-                return
-
             print("\nAvailable venues:")
             for idx, v in enumerate(venues, start=1):
-                print(f"{idx}. {v.name} (ID={v.id})")
-            print("Press Enter to keep current venue.")
+                print(f"{idx}. {v.name}")
 
-            venue_choice_str = input("Choose venue (number): ").strip()
-            if venue_choice_str == "":
-                venue_id = selected.venue_id
-            else:
-                if not venue_choice_str.isdigit():
-                    raise ValueError("Invalid venue selection.")
-                venue_index = int(venue_choice_str) - 1
-                if venue_index < 0 or venue_index >= len(venues):
-                    raise ValueError("Venue index out of range.")
-                venue_id = venues[venue_index].id
+            while True:
+                raw = input("Choose venue (Enter = keep current): ").strip()
+                if raw == "":
+                    venue_id = selected.venue_id
+                    break
+                if not raw.isdigit():
+                    print("❌ Invalid venue selection.")
+                    continue
+                venue_index = int(raw) - 1
+                if 0 <= venue_index < len(venues):
+                    venue_id = venues[venue_index].id
+                    break
+                else:
+                    print("❌ Venue index out of range.")
 
-            is_active_str = input(
-                f"Is active? (y/n) [current={'y' if selected.is_active else 'n'}]: "
-            ).strip().lower()
-            if is_active_str == "":
-                is_active = selected.is_active
-            else:
-                is_active = is_active_str == "y"
+            # IS ACTIVE
+            while True:
+                raw = input(
+                    f"Is active? (y/n) [current={'y' if selected.is_active else 'n'}]: "
+                ).strip()
+                if raw == "":
+                    is_active = selected.is_active
+                    break
+                try:
+                    is_active = validate_yes_no(raw, "Is active")
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
             updated = self._event_service.update_event(
                 event_id=selected.id,
@@ -387,12 +497,13 @@ class CLIController:
                 is_active=is_active
             )
 
-            print("\nEvent successfully updated:")
+            print("\n✅ Event successfully updated:")
             print(updated.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error: {ex}")
             logger.error("Error while updating event: %s", ex)
+
 
     def delete_event(self):
         try:
@@ -431,21 +542,70 @@ class CLIController:
     # ===================== PARTICIPANT ===================== #
 
     def create_participant(self):
+        print("\n--- Create Participant ---")
         try:
-            print("\n--- Create Participant ---")
-            full_name = input("Full name: ").strip()
-            email = input("Email: ").strip()
-            phone = input("Phone: ").strip()
-            age_str = input("Age: ").strip()
-            gender = input("Gender (M/F): ").strip()
-            registration_date = input("Registration date (YYYY-MM-DD): ").strip()
-            is_vip_str = input("Is VIP? (y/n): ").strip().lower()
+            # Full name
+            while True:
+                try:
+                    raw_name = input("Full name: ")
+                    full_name = normalize_full_name(raw_name)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
-            if not age_str.isdigit():
-                raise ValueError("Age must be a positive integer.")
-            age = int(age_str)
+            # Email
+            while True:
+                try:
+                    raw_email = input("Email: ")
+                    email = validate_email(raw_email)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
-            is_vip = is_vip_str == "y"
+            # Phone
+            while True:
+                try:
+                    raw_phone = input("Phone (e.g. 0501234567): ")
+                    phone = validate_phone(raw_phone)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Age
+            while True:
+                try:
+                    raw_age = input("Age: ")
+                    age = validate_positive_int(raw_age, "Age")
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Gender
+            while True:
+                try:
+                    raw_gender = input("Gender (M/F): ")
+                    gender = validate_gender(raw_gender)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Registration date
+            while True:
+                try:
+                    raw_date = input("Registration date (YYYY-MM-DD): ")
+                    registration_date = validate_date(raw_date)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
+
+            # Is VIP
+            while True:
+                try:
+                    raw_vip = input("Is VIP? (y/n): ")
+                    is_vip = validate_yes_no(raw_vip, "Is VIP")
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
             participant = self._participant_service.create_participant(
                 full_name=full_name,
@@ -460,9 +620,10 @@ class CLIController:
             print("\nParticipant successfully created:")
             print(participant.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error while creating participant: {ex}")
             logger.error("Error while creating participant: %s", ex)
+
 
     def list_participants(self):
         print("\n--- List of Participants ---")
@@ -475,6 +636,7 @@ class CLIController:
             print("-" * 40)
             print(p.display_info())
 
+
     def update_participant(self):
         try:
             print("\n--- Update Participant ---")
@@ -486,43 +648,105 @@ class CLIController:
             for idx, p in enumerate(participants, start=1):
                 print(f"{idx}. {p.full_name} (ID={p.id})")
 
-            choice_str = input("Choose participant to update (number): ").strip()
-            if not choice_str.isdigit():
-                raise ValueError("Invalid selection.")
-            index = int(choice_str) - 1
-            if index < 0 or index >= len(participants):
-                raise ValueError("Index out of range.")
+            while True:
+                choice_str = input("Choose participant to update (number): ").strip()
+                if not choice_str.isdigit():
+                    print("❌ Invalid selection.")
+                    continue
+                index = int(choice_str) - 1
+                if 0 <= index < len(participants):
+                    selected = participants[index]
+                    break
+                else:
+                    print("❌ Index out of range.")
 
-            selected = participants[index]
+            print("\nPress Enter to keep current value.\n")
 
-            print("\nLeave field empty to keep current value.")
+            # FULL NAME
+            while True:
+                raw = input(f"Full name [{selected.full_name}]: ").strip()
+                if raw == "":
+                    full_name = selected.full_name
+                    break
+                try:
+                    full_name = normalize_full_name(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            full_name = (
-                input(f"Full name [{selected.full_name}]: ").strip()
-                or selected.full_name
-            )
-            email = input(f"Email [{selected.email}]: ").strip() or selected.email
-            phone = input(f"Phone [{selected.phone}]: ").strip() or selected.phone
+            # EMAIL
+            while True:
+                raw = input(f"Email [{selected.email}]: ").strip()
+                if raw == "":
+                    email = selected.email
+                    break
+                try:
+                    email = validate_email(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            age_str = input(f"Age [{selected.age}]: ").strip()
-            age = selected.age if age_str == "" else int(age_str)
+            # PHONE
+            while True:
+                raw = input(f"Phone [{selected.phone}]: ").strip()
+                if raw == "":
+                    phone = selected.phone
+                    break
+                try:
+                    phone = validate_phone(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            gender = (
-                input(f"Gender [{selected.gender}]: ").strip()
-                or selected.gender
-            )
-            registration_date = (
-                input(f"Registration date [{selected.registration_date}]: ").strip()
-                or selected.registration_date
-            )
+            # AGE
+            while True:
+                raw = input(f"Age [{selected.age}]: ").strip()
+                if raw == "":
+                    age = selected.age
+                    break
+                try:
+                    age = validate_positive_int(raw, "Age")
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            is_vip_str = input(
-                f"Is VIP? (y/n) [current={'y' if selected.is_vip else 'n'}]: "
-            ).strip().lower()
-            if is_vip_str == "":
-                is_vip = selected.is_vip
-            else:
-                is_vip = is_vip_str == "y"
+            # GENDER
+            while True:
+                raw = input(f"Gender [{selected.gender}]: ").strip()
+                if raw == "":
+                    gender = selected.gender
+                    break
+                try:
+                    gender = validate_gender(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
+
+            # REGISTRATION DATE
+            while True:
+                raw = input(f"Registration date [{selected.registration_date}]: ").strip()
+                if raw == "":
+                    registration_date = selected.registration_date
+                    break
+                try:
+                    registration_date = validate_date(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
+
+            # IS VIP
+            while True:
+                raw = input(
+                    f"Is VIP? (y/n) [current={'y' if selected.is_vip else 'n'}]: "
+                ).strip()
+                if raw == "":
+                    is_vip = selected.is_vip
+                    break
+                try:
+                    is_vip = validate_yes_no(raw, "Is VIP")
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
             updated = self._participant_service.update_participant(
                 participant_id=selected.id,
@@ -535,12 +759,13 @@ class CLIController:
                 is_vip=is_vip
             )
 
-            print("\nParticipant successfully updated:")
+            print("\n✅ Participant successfully updated:")
             print(updated.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error: {ex}")
             logger.error("Error while updating participant: %s", ex)
+
 
     def delete_participant(self):
         try:
@@ -579,9 +804,8 @@ class CLIController:
     # ===================== TICKET ===================== #
 
     def sell_ticket(self):
+        print("\n--- Sell Ticket ---")
         try:
-            print("\n--- Sell Ticket ---")
-
             # 1) Event seç
             events = self._event_service.list_events()
             if not events:
@@ -592,13 +816,17 @@ class CLIController:
             for idx, e in enumerate(events, start=1):
                 print(f"{idx}. {e.name} on {e.date} (ID={e.id})")
 
-            event_choice_str = input("Choose event (number): ").strip()
-            if not event_choice_str.isdigit():
-                raise ValueError("Invalid event selection.")
-            event_index = int(event_choice_str) - 1
-            if event_index < 0 or event_index >= len(events):
-                raise ValueError("Event index out of range.")
-            selected_event = events[event_index]
+            while True:
+                event_choice_str = input("Choose event (number): ").strip()
+                if not event_choice_str.isdigit():
+                    print("Error: Invalid event selection.")
+                    continue
+                event_index = int(event_choice_str) - 1
+                if event_index < 0 or event_index >= len(events):
+                    print("Error: Event index out of range.")
+                    continue
+                selected_event = events[event_index]
+                break
 
             # 2) Participant seç
             participants = self._participant_service.list_participants()
@@ -610,23 +838,46 @@ class CLIController:
             for idx, p in enumerate(participants, start=1):
                 print(f"{idx}. {p.full_name} (ID={p.id})")
 
-            participant_choice_str = input("Choose participant (number): ").strip()
-            if not participant_choice_str.isdigit():
-                raise ValueError("Invalid participant selection.")
-            participant_index = int(participant_choice_str) - 1
-            if participant_index < 0 or participant_index >= len(participants):
-                raise ValueError("Participant index out of range.")
-            selected_participant = participants[participant_index]
+            while True:
+                participant_choice_str = input("Choose participant (number): ").strip()
+                if not participant_choice_str.isdigit():
+                    print("Error: Invalid participant selection.")
+                    continue
+                participant_index = int(participant_choice_str) - 1
+                if participant_index < 0 or participant_index >= len(participants):
+                    print("Error: Participant index out of range.")
+                    continue
+                selected_participant = participants[participant_index]
+                break
 
             # 3) Ticket məlumatları
-            price_str = input("Base price: ").strip()
-            if not price_str.replace(".", "", 1).isdigit():
-                raise ValueError("Price must be a non-negative number.")
-            price = float(price_str)
+            while True:
+                try:
+                    raw_price = input("Base price: ")
+                    price = validate_price(raw_price)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
-            seat_number = input("Seat number: ").strip()
-            ticket_type = input("Ticket type (Standard/VIP/Student): ").strip()
-            purchase_date = input("Purchase date (YYYY-MM-DD): ").strip()
+            while True:
+                seat_number = input("Seat number: ").strip()
+                if seat_number:
+                    break
+                print("Error: Seat number is required.")
+
+            while True:
+                ticket_type = input("Ticket type (Standard/VIP/Student): ").strip()
+                if ticket_type:
+                    break
+                print("Error: Ticket type is required.")
+
+            while True:
+                try:
+                    raw_date = input("Purchase date (YYYY-MM-DD): ")
+                    purchase_date = validate_date(raw_date)
+                    break
+                except ValueError as e:
+                    print(f"Error: {e}")
 
             ticket = self._ticket_service.sell_ticket(
                 event_id=selected_event.id,
@@ -641,9 +892,10 @@ class CLIController:
             print("\nTicket successfully sold:")
             print(ticket.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error while selling ticket: {ex}")
             logger.error("Error while selling ticket: %s", ex)
+
 
     def list_tickets(self):
         print("\n--- List of Tickets ---")
@@ -665,49 +917,70 @@ class CLIController:
                 return
 
             for idx, t in enumerate(tickets, start=1):
-                print(f"{idx}. Ticket ID={t.id} | Event={t.event_id} | Participant={t.participant_id}")
+                print(
+                    f"{idx}. Ticket ID={t.id} | Event={t.event_id} | Participant={t.participant_id}"
+                )
 
-            choice_str = input("Choose ticket to update (number): ").strip()
-            if not choice_str.isdigit():
-                raise ValueError("Invalid selection.")
-            index = int(choice_str) - 1
-            if index < 0 or index >= len(tickets):
-                raise ValueError("Index out of range.")
+            while True:
+                choice_str = input("Choose ticket to update (number): ").strip()
+                if not choice_str.isdigit():
+                    print("❌ Invalid selection.")
+                    continue
+                index = int(choice_str) - 1
+                if 0 <= index < len(tickets):
+                    selected = tickets[index]
+                    break
+                else:
+                    print("❌ Index out of range.")
 
-            selected = tickets[index]
+            print("\nPress Enter to keep current value.\n")
 
-            print("\nLeave field empty to keep current value.")
+            # PRICE
+            while True:
+                raw = input(f"Price [{selected.price}]: ").strip()
+                if raw == "":
+                    price = selected.price
+                    break
+                try:
+                    price = validate_price(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            price_str = input(f"Price [{selected.price}]: ").strip()
-            if price_str == "":
-                price = selected.price
-            else:
-                if not price_str.replace(".", "", 1).isdigit():
-                    raise ValueError("Price must be a non-negative number.")
-                price = float(price_str)
+            # SEAT NUMBER
+            raw = input(f"Seat number [{selected.seat_number}]: ").strip()
+            seat_number = raw if raw else selected.seat_number
 
-            seat_number = (
-                input(f"Seat number [{selected.seat_number}]: ").strip()
-                or selected.seat_number
-            )
-            ticket_type = (
-                input(f"Ticket type [{selected.ticket_type}]: ").strip()
-                or selected.ticket_type
-            )
-            purchase_date = (
-                input(f"Purchase date [{selected.purchase_date}]: ").strip()
-                or selected.purchase_date
-            )
+            # TICKET TYPE
+            raw = input(f"Ticket type [{selected.ticket_type}]: ").strip()
+            ticket_type = raw if raw else selected.ticket_type
 
-            is_used_str = input(
-                f"Is used? (y/n) [current={'y' if selected.is_used else 'n'}]: "
-            ).strip().lower()
-            if is_used_str == "":
-                is_used = selected.is_used
-            else:
-                is_used = is_used_str == "y"
+            # PURCHASE DATE
+            while True:
+                raw = input(f"Purchase date [{selected.purchase_date}]: ").strip()
+                if raw == "":
+                    purchase_date = selected.purchase_date
+                    break
+                try:
+                    purchase_date = validate_date(raw)
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
 
-            # event_id və participant_id-ni dəyişmirik (istəsən sonra genişləndirə bilərik)
+            # IS USED
+            while True:
+                raw = input(
+                    f"Is used? (y/n) [current={'y' if selected.is_used else 'n'}]: "
+                ).strip()
+                if raw == "":
+                    is_used = selected.is_used
+                    break
+                try:
+                    is_used = validate_yes_no(raw, "Is used")
+                    break
+                except ValueError as e:
+                    print(f"❌ {e}")
+
             updated = self._ticket_service.update_ticket(
                 ticket_id=selected.id,
                 event_id=selected.event_id,
@@ -719,12 +992,13 @@ class CLIController:
                 is_used=is_used
             )
 
-            print("\nTicket successfully updated:")
+            print("\n✅ Ticket successfully updated:")
             print(updated.display_info())
 
-        except ValueError as ex:
-            print(f"Error: {ex}")
+        except Exception as ex:
+            print(f"Unexpected error: {ex}")
             logger.error("Error while updating ticket: %s", ex)
+
 
     def delete_ticket(self):
         try:
