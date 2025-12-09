@@ -1,95 +1,105 @@
-# 🎫 Event Management System (OOP + SQLite)
+# 🎟️ Event Management System (CLI + SQLite)
 
-This is a **console-based Event Management System** developed in Python using
-**Object-Oriented Programming (OOP)**, **SOLID, GRASP, CUPID principles**, and
-**SQLite** as a database.
+This project is a fully-featured **Event Management System** developed using **Python**, following **Object-Oriented Programming (OOP)** principles and advanced **software design principles** such as:
 
-The project was developed for **Seminar 1 and Seminar 2** at university and
-demonstrates clean architecture, layered design, design patterns, and testing.
+- ✅ SOLID
+- ✅ GRASP
+- ✅ CUPID
+- ✅ Design Patterns (Singleton, Strategy)
+- ✅ Layered Architecture (Controller, Service, Repository, Model)
 
----
-
-## 🚀 Features
-
-### ✅ Features
-
-- Object-Oriented Design (OOP)
-- SQLite Database Integration
-- CRUD Operations:
-  - Venue
-  - Event
-  - Participant
-  - Ticket
-- Logging system
-- CLI-based UI
-- Repo + Service + Controller Layer Architecture
-- UUID-based IDs
-- Encapsulation & Abstraction with BaseModel
-
-### ✅ Extended Features
-
-- ✅ Service Layer (Business Logic)
-- ✅ Update & Delete Operations
-- ✅ Strategy Pattern (Ticket Pricing)
-- ✅ Unit Testing with `unittest`
-- ✅ Layered Architecture (Controller → Service → Repository → DB)
-- ✅ Error Handling & Logging at all layers
+The system is controlled via a **Command Line Interface (CLI)** and persists data using **SQLite**.
 
 ---
 
-## 🛠 Technologies Used
+## 📌 Features
+
+✅ Venue Management (CRUD)  
+✅ Event Management (CRUD)  
+✅ Participant Management (CRUD)  
+✅ Ticket Sales with Dynamic Pricing (Strategy Pattern)  
+✅ VIP / Student / Standard Pricing  
+✅ Validation System for All Fields  
+✅ Real-Time Error Handling  
+✅ SQLite Database Integration  
+✅ Logging System  
+✅ Fully Interactive CLI
+
+---
+
+## 🧱 Technologies Used
 
 - Python 3
 - SQLite
-- Logging
-- unittest (Testing)
 - OOP & Design Patterns
+- CLI Interface
+- Logging Module
 
 ---
 
-## 📂 Project Structure
+## 🗂️ Project Structure
 
-OOP_Event_Management/
+src/
 │
-├── src/
-│ ├── controllers/
-│ ├── services/
-│ │ ├── pricing/ ← Strategy Pattern
-│ ├── repositories/
-│ ├── models/
-│ ├── database/
-│ ├── logging_config.py
-│ └── main.py
+├── controllers/
+│ └── cli_controller.py
 │
-├── tests/
-│ ├── test_ticket_service.py
-│ ├── test_repositories.py
-| ├── test_models.py
+├── services/
+│ └── _\_service.py
 │
-├── docs/
-│ ├── design_principles.md
-│ ├── architecture.md
-│ ├── seminar2_features.md
+├── repositories/
+│ └── _\_repository.py
 │
-└── README.md
+├── models/
+│ └── venue.py, event.py, participant.py, ticket.py
+│
+├── utils/
+│ └── validators.py
+│
+├── database/
+│ ├── connection.py
+│ └── schema.py
+│
+├── main.py
+│── logging_config.py
 
-## ▶️ How to Run
+---
+
+## ▶️ How to Run the Project
 
 ```bash
 python3 -m src.main
 
+Validation System
 
-🧪 How to Run Tests
-python3 -m unittest discover
+All fields are strictly validated:
 
-'''
+✅ Email format
 
-🧠 Design Patterns Used
- - Strategy Pattern (Ticket Pricing)
- - Singleton (Database Connection)
- - Repository Pattern
- - Service Layer Pattern
+✅ Phone format
 
+✅ Date & Time format
 
+✅ Positive numeric values
 
+✅ Gender validation
+
+✅ Yes/No boolean validation
 ```
+
+Design Principles Used
+
+| Principle        | Usage                                            |
+| ---------------- | ------------------------------------------------ |
+| SOLID            | Applied across Service & Repository layers       |
+| GRASP            | Controller handles inputs, Services handle logic |
+| CUPID            | Clean and modular design                         |
+| Strategy Pattern | Ticket pricing                                   |
+| Singleton        | Database connection                              |
+| Repository       | Database abstraction                             |
+
+Academic Purpose
+This project was developed as a final academic project based on:
+✅ Seminar 1 requirements
+✅ Seminar 2 enhancements
+✅ OOP_FF Final Framework

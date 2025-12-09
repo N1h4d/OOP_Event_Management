@@ -1,61 +1,98 @@
-# 🏗 Project Architecture
+---
 
-This project follows a **4-Layer Architecture**:
+#`docs/architecture.md`
 
-CLI Controller
-↓
-Service Layer (Business Logic)
-↓
-Repository Layer (Database Access)
-↓
-SQLite Database
+```md
+# 🏗️ System Architecture
+
+This project follows a **multi-layered clean architecture** approach.
 
 ---
 
-## 🔹 Controller Layer
+## 🔹 Architectural Layers
 
-- Handles user input/output
-- Calls service layer
-- No database logic here
+### 1️⃣ Controller Layer
 
-Example:
+- Handles all user input/output
+- No business logic
+- Example: `CLIController`
 
-- `CLIController`
+### 2️⃣ Service Layer
 
----
-
-## 🔹 Service Layer
-
+- Business logic
 - Validations
-- Business rules
-- Strategy pattern for ticket pricing
-- Acts as mediator
+- Rules
+- Example: `EventService`, `TicketService`
 
-Example:
+### 3️⃣ Repository Layer
 
-- `VenueService`
-- `TicketService`
+- Database access only
+- Pure SQL operations
+- Example: `EventRepository`
 
----
+### 4️⃣ Model Layer
 
-## 🔹 Repository Layer
-
-- Communicates with SQLite
-- Pure SQL logic
-- CRUD operations
-
-Example:
-
-- `VenueRepository`
-- `EventRepository`
+- Domain objects
+- Pure data classes
+- Example: `Event`, `Venue`, `Participant`, `Ticket`
 
 ---
 
-## 🔹 Database Layer
+## 🔁 Data Flow
 
-- SQLite
-- Tables:
-  - venues
-  - events
-  - participants
-  - tickets
+User → CLI → Service → Repository → SQLite
+
+---
+
+## 🧠 Design Patterns
+
+### ✅ Singleton
+
+Used in `DatabaseConnection` to keep **one active database connection**.
+
+### ✅ Strategy Pattern
+
+Used in ticket pricing:
+
+- StandardPricing
+- VipPricing
+- StudentPricing
+
+---
+
+## ✅ Principles Applied
+
+### SOLID:
+
+- SRP – Each class has single responsibility
+- OCP – New ticket pricing strategies can be added
+- DIP – Services depend on Repository abstraction
+
+### GRASP:
+
+- Controller → CLIController
+- Information Expert → Services
+- Low Coupling → All layers separated
+
+### CUPID:
+
+- Composable services
+- Predictable structure
+- Idiomatic Python
+- Domain-focused design
+
+---
+
+## ✅ Logging Architecture
+
+- All important operations are logged:
+  - Create
+  - Read
+  - Update
+  - Delete
+- Logs written to:
+  logs/app.log
+
+---
+
+✅ This architecture fully satisfies **Seminar 1 + Seminar 2 + Final Framework** standards.
